@@ -46,7 +46,7 @@ import { ResumeService } from '../services/resume.service';
         <div class="timeline" [@staggerList]>
           <div class="tl-item" *ngFor="let exp of resume()?.experience" [@fadeIn]>
             <div class="tl-dot"></div>
-            <div class="tl-card">
+            <div class="tl-card hoverable">
               <div class="card-head">
                 <div>
                   <h3>{{ exp.role }}</h3>
@@ -178,7 +178,7 @@ import { ResumeService } from '../services/resume.service';
     .timeline::before { content:''; position: absolute; left: .6rem; top: .2rem; bottom: .2rem; width: 2px; background: var(--border); }
     .tl-item { position: relative; padding-left: 2rem; margin: 1.1rem 0; }
     .tl-dot { position: absolute; left: -.1rem; top: .4rem; width: .8rem; height: .8rem; border-radius: 999px; background: var(--accent); box-shadow: 0 0 0 3px rgba(108,92,231,0.25); }
-    .tl-card { padding: 1rem; border: 1px solid var(--border); border-radius: .8rem; background: var(--surface); }
+    .tl-card { padding: 1rem; border: 1px solid var(--border); border-radius: .8rem; background: var(--surface); transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease; }
     @keyframes pulseGlow { 0% { box-shadow: 0 0 0 0 rgba(108,92,231,0.5);} 70% { box-shadow: 0 0 0 12px rgba(108,92,231,0);} 100% { box-shadow: 0 0 0 0 rgba(108,92,231,0);} }
     @keyframes bulletPulse { 0% { transform: scale(0.9); box-shadow: 0 0 0 2px rgba(108,92,231,0.18);} 50% { transform: scale(1.05); box-shadow: 0 0 0 4px rgba(108,92,231,0.12);} 100% { transform: scale(0.9); box-shadow: 0 0 0 2px rgba(108,92,231,0.18);} }
   `,
