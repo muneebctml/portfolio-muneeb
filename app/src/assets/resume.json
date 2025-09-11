@@ -92,13 +92,19 @@
     }
   ],
   "education": [
-    {
-      "institution": "University Name",
-      "degree": "B.Sc. in Computer Science",
-      "start": "2015",
-      "end": "2019",
-      "location": "City",
-      "highlights": ["Graduated with Honors"]
-    }
-  ]
+  {
+    "institution": "Bahauddin Zakariya University - BZU",
+    "degree": "BS Computer Science",
+    "start": "2014",
+    "end": "2019",
+    "location": "Multan, Pakistan",
+    "highlights": [
+      "Completed coursework in software engineering, database systems, and distributed computing.",
+      "Graduated with strong focus on .NET development, web technologies, and cloud computing.",
+      "Led multiple academic projects including an ERP module and mobile applications.",
+      "Actively participated in coding competitions and university hackathons.",
+      "Developed a final year project integrating .NET, SQL Server, and cloud services."
+    ]
+  }
+]
 }
