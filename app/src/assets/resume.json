@@ -78,19 +78,83 @@
     "technologies": ["Unity3D", "C#", "Android", "Game Development"]
   }
 ],
-  "projects": [
-    {
-      "name": "Project One",
-      "description": "Short description of what this project solves and your role.",
-      "url": "https://project-one.example.com",
-      "repo": "https://github.com/yourhandle/project-one",
-      "highlights": [
-        "Implemented offline caching and background sync.",
-        "Achieved 95+ Lighthouse PWA score."
-      ],
-      "technologies": ["Angular", "Workbox", "SCSS"]
-    }
-  ],
+"projects": [
+  {
+    "name": "ERP System for Textile Industry",
+    "description": "An enterprise ERP platform developed to streamline finance, HR, and operations for a textile company.",
+    "url": "",
+    "repo": "",
+    "highlights": [
+      "Customized Microsoft Dynamics GP ERP with in-house modules.",
+      "Integrated biometric devices for attendance tracking of 5,000+ employees.",
+      "Improved financial reporting speed by 30% with optimized SQL queries."
+    ],
+    "technologies": [".NET", "Microsoft Dynamics GP", "SQL Server", "SSRS", "Angular"]
+  },
+  {
+    "name": "Healthcare Compliance Platform",
+    "description": "A HIPAA-compliant web application enabling secure patient data management, billing, and reporting.",
+    "url": "",
+    "repo": "",
+    "highlights": [
+      "Developed core backend using .NET 7 and Azure SQL.",
+      "Automated invoicing, PDF reports, and email notifications.",
+      "Enhanced usability with interactive Razor Pages and jQuery."
+    ],
+    "technologies": [".NET 7", "Azure SQL", "Razor Pages", "jQuery"]
+  },
+  {
+    "name": "Cloud-Based ERP Reporting System",
+    "description": "A reporting solution for ERP systems designed to handle large-scale financial and operational datasets.",
+    "url": "",
+    "repo": "",
+    "highlights": [
+      "Optimized PostgreSQL & ClickHouse queries, reducing data processing costs by 25%.",
+      "Implemented CI/CD pipelines with GitLab and Docker.",
+      "Delivered real-time dashboards for executives and stakeholders."
+    ],
+    "technologies": [".NET 9", "React", "PostgreSQL", "ClickHouse", "Docker", "GitLab CI/CD"]
+  },
+  {
+    "name": "Human Resource Management System (HRMS)",
+    "description": "A complete HRM system built from the ground up, covering the entire employee lifecycle from joining to resignation.",
+    "url": "",
+    "repo": "",
+    "highlights": [
+      "Designed and developed modules for payroll, salary-on-roll, leave management, and clearance workflows.",
+      "Implemented user-based access rights for secure role management.",
+      "Integrated with biometric devices (fingerprint, barcode) for attendance tracking.",
+      "Connected with ERP for seamless financial and operational reporting.",
+      "Automated reporting with SSRS for HR and finance departments."
+    ],
+    "technologies": [".NET", "Razor Pages", "AngularJS", "MSSQL", "SSRS", "jQuery", "Biometric SDKs", "ERP Integration"]
+  },
+  {
+    "name": "Loom Management System",
+    "description": "A web-based control and monitoring panel for weaving machines, providing detailed production tracking, reporting, and efficiency analytics.",
+    "url": "https://weavingautomation.colossys.com:8081/",
+    "repo": "",
+    "highlights": [
+      "Developed panel to monitor loom status and machine performance in real time.",
+      "Enabled supervisors to control weaving functions and track downtime.",
+      "Built reporting dashboards to measure production efficiency and output trends.",
+      "Integrated with ERP for unified textile production management."
+    ],
+    "technologies": [".NET", "Razor Pages", "AngularJS", "MSSQL", "SSRS", "jQuery", "ERP Integration"]
+  },
+  {
+    "name": "Android Games (Unity3D)",
+    "description": "Multiple mobile games developed and published on Google Play Store.",
+    "url": "",
+    "repo": "",
+    "highlights": [
+      "Designed immersive gameplay and responsive UI/UX.",
+      "Published Android titles gaining thousands of downloads.",
+      "Implemented efficient C# game scripts for smooth performance."
+    ],
+    "technologies": ["Unity3D", "C#", "Android", "Game Development"]
+  }
+],
   "education": [
   {
     "institution": "Bahauddin Zakariya University - BZU",
