@@ -1,0 +1,63 @@
+{
+  "name": "Muneeb Ur Rehman",
+  "title": "Your Title (e.g., Senior Frontend Developer)",
+  "location": "City, Country",
+  "photo": "assets/avatar.png",
+  "email": "you@example.com",
+  "phone": "+1 234 567 8901",
+  "website": "https://yourdomain.com",
+  "linkedin": "https://linkedin.com/in/yourhandle",
+  "github": "https://github.com/yourhandle",
+  "summary": "Brief professional summary in 2–3 sentences highlighting your impact and strengths.",
+  "skills": ["Angular", "TypeScript", "RxJS", "SCSS", "Node.js"],
+  "tools": ["Git", "Jest", "Cypress", "Docker", "Figma"],
+  "experience": [
+    {
+      "company": "Company A",
+      "role": "Senior Frontend Engineer",
+      "start": "Jan 2022",
+      "end": "Present",
+      "location": "Remote",
+      "highlights": [
+        "Led migration to standalone Angular with performance budget enforcement.",
+        "Improved Core Web Vitals (LCP -30%, CLS -60%)."
+      ],
+      "technologies": ["Angular", "RxJS", "NgRx", "SCSS", "Node.js"]
+    },
+    {
+      "company": "Company B",
+      "role": "Frontend Developer",
+      "start": "Jun 2019",
+      "end": "Dec 2021",
+      "location": "City",
+      "highlights": [
+        "Built component library adopted across 4 teams.",
+        "Introduced CI checks for accessibility and bundle size."
+      ],
+      "technologies": ["Angular", "Storybook", "Jest"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project One",
+      "description": "Short description of what this project solves and your role.",
+      "url": "https://project-one.example.com",
+      "repo": "https://github.com/yourhandle/project-one",
+      "highlights": [
+        "Implemented offline caching and background sync.",
+        "Achieved 95+ Lighthouse PWA score."
+      ],
+      "technologies": ["Angular", "Workbox", "SCSS"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University Name",
+      "degree": "B.Sc. in Computer Science",
+      "start": "2015",
+      "end": "2019",
+      "location": "City",
+      "highlights": ["Graduated with Honors"]
+    }
+  ]
+}
