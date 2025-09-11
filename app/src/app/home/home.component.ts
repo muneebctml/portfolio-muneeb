@@ -50,9 +50,9 @@ import { ResumeService } from '../services/resume.service';
               <div class="card-head">
                 <div>
                   <h3>{{ exp.role }}</h3>
-                  <div class="meta">{{ exp.company }} • {{ exp.location || '' }}</div>
+                  <div class="meta">{{ exp.company }} &bull; {{ exp.location || '' }}</div>
                 </div>
-                <div class="dates">{{ exp.start }} — {{ exp.end }}</div>
+                <div class="dates">{{ exp.start }} &mdash; {{ exp.end }}</div>
               </div>
               <ul class="highlights" *ngIf="exp.highlights?.length">
                 <li *ngFor="let h of exp.highlights">{{ h }}</li>
@@ -103,9 +103,9 @@ import { ResumeService } from '../services/resume.service';
         <div class="card hoverable" *ngFor="let e of resume()?.education" [@fadeIn]>
           <div class="card-head">
             <h3>{{ e.degree }}</h3>
-            <div class="dates">{{ e.start || '' }}<span *ngIf="e.start || e.end"> — </span>{{ e.end || '' }}</div>
+            <div class="dates">{{ e.start || '' }}<span *ngIf="e.start || e.end"> &mdash; </span>{{ e.end || '' }}</div>
           </div>
-          <div class="meta">{{ e.institution }} • {{ e.location || '' }}</div>
+          <div class="meta">{{ e.institution }} &bull; {{ e.location || '' }}</div>
           <ul class="highlights" *ngIf="e.highlights?.length">
             <li *ngFor="let h of e.highlights">{{ h }}</li>
           </ul>
@@ -159,10 +159,11 @@ import { ResumeService } from '../services/resume.service';
     .card { border: 1px solid var(--border); border-radius: .8rem; padding: 1rem; margin: 1rem 0; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00)), var(--surface); box-shadow: 0 6px 20px rgba(0,0,0,0.25); transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease; }
     .hoverable:hover { transform: translateY(-2px) scale(1.01); border-color: color-mix(in oklab, var(--border) 60%, var(--accent)); box-shadow: 0 12px 28px rgba(0,0,0,0.3); }
     .card-head { display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; }
+    .highlights { list-style: none; padding-left: 0; margin: .5rem 0 0 0; }
+    .highlights li { margin: .35rem 0; position: relative; padding-left: 1.2rem; }
+    .highlights li::before { content: ''; position: absolute; left: 0; top: .55rem; width: .5rem; height: .5rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px rgba(108,92,231,0.18); animation: bulletPulse 2.2s ease-in-out infinite; }
     .dates { color: var(--muted-fg); white-space: nowrap; }
     .meta { color: var(--muted-fg); }
-    .highlights { margin: .5rem 0 0 1rem; }
-    .highlights li { margin: .25rem 0; }
     .tags { display:flex; flex-wrap: wrap; gap: .4rem; margin-top: .5rem; }
     .tag { padding: .25rem .55rem; border-radius: 999px; background: var(--chip); color: var(--fg); font-size: .85rem; border: 1px solid var(--border); }
     .description { color: var(--muted-fg); margin: .25rem 0 .5rem; }
@@ -179,6 +180,7 @@ import { ResumeService } from '../services/resume.service';
     .tl-dot { position: absolute; left: -.1rem; top: .4rem; width: .8rem; height: .8rem; border-radius: 999px; background: var(--accent); box-shadow: 0 0 0 3px rgba(108,92,231,0.25); }
     .tl-card { padding: 1rem; border: 1px solid var(--border); border-radius: .8rem; background: var(--surface); }
     @keyframes pulseGlow { 0% { box-shadow: 0 0 0 0 rgba(108,92,231,0.5);} 70% { box-shadow: 0 0 0 12px rgba(108,92,231,0);} 100% { box-shadow: 0 0 0 0 rgba(108,92,231,0);} }
+    @keyframes bulletPulse { 0% { transform: scale(0.9); box-shadow: 0 0 0 2px rgba(108,92,231,0.18);} 50% { transform: scale(1.05); box-shadow: 0 0 0 4px rgba(108,92,231,0.12);} 100% { transform: scale(0.9); box-shadow: 0 0 0 2px rgba(108,92,231,0.18);} }
   `,
   animations: [
     trigger('fadeIn', [
@@ -209,7 +211,7 @@ export class HomeComponent {
   constructor() {
     this.resumeSvc.getResume().subscribe(r => {
       this.resume.set(r);
-      if (r?.name) this.title.setTitle(`${r.name} — ${r.title || 'Portfolio'}`);
+      if (r?.name) this.title.setTitle(`${r.name} - ${r.title || 'Portfolio'}`);
       const desc = r?.summary || 'Portfolio';
       this.meta.updateTag({ name: 'description', content: desc });
     });
