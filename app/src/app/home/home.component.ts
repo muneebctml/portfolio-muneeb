@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Title, Meta } from '@angular/platform-browser';
-import { animate, style, transition, trigger } from '@angular/animations';
+import { animate, style, transition, trigger, query, stagger } from '@angular/animations';
 import { Resume } from '../models/resume';
 import { ResumeService } from '../services/resume.service';
 
@@ -43,7 +43,7 @@ import { ResumeService } from '../services/resume.service';
     <main class="container main">
       <section id="experience">
         <h2>Experience</h2>
-        <div class="timeline">
+        <div class="timeline" [@staggerList]>
           <div class="tl-item" *ngFor="let exp of resume()?.experience" [@fadeIn]>
             <div class="tl-dot"></div>
             <div class="tl-card">
@@ -67,8 +67,8 @@ import { ResumeService } from '../services/resume.service';
 
       <section id="projects">
         <h2>Projects</h2>
-        <div class="grid">
-          <article class="card" *ngFor="let p of resume()?.projects" [@fadeIn]>
+        <div class="grid" [@staggerList]>
+          <article class="card hoverable" *ngFor="let p of resume()?.projects" [@fadeIn]>
             <div class="card-head">
               <h3>{{ p.name }}</h3>
               <div class="links">
@@ -80,7 +80,7 @@ import { ResumeService } from '../services/resume.service';
             <ul class="highlights" *ngIf="p.highlights?.length">
               <li *ngFor="let h of p.highlights">{{ h }}</li>
             </ul>
-            <div class="tags" *ngIf="p.technologies?.length">
+            <div class="tags" *ngIf="p.technologies?.length" [@staggerList]>
               <span class="tag" *ngFor="let t of p.technologies">{{ t }}</span>
             </div>
           </article>
@@ -89,18 +89,18 @@ import { ResumeService } from '../services/resume.service';
 
       <section id="skills">
         <h2>Skills</h2>
-        <div class="tags" [@fadeIn]>
+        <div class="tags" [@staggerList]>
           <span class="tag" *ngFor="let s of resume()?.skills">{{ s }}</span>
         </div>
         <h3 *ngIf="resume()?.tools?.length">Tools</h3>
-        <div class="tags" *ngIf="resume()?.tools?.length" [@fadeIn]>
+        <div class="tags" *ngIf="resume()?.tools?.length" [@staggerList]>
           <span class="tag" *ngFor="let t of resume()?.tools">{{ t }}</span>
         </div>
       </section>
 
       <section id="education">
         <h2>Education</h2>
-        <div class="card" *ngFor="let e of resume()?.education" [@fadeIn]>
+        <div class="card hoverable" *ngFor="let e of resume()?.education" [@fadeIn]>
           <div class="card-head">
             <h3>{{ e.degree }}</h3>
             <div class="dates">{{ e.start || '' }}<span *ngIf="e.start || e.end"> — </span>{{ e.end || '' }}</div>
@@ -114,7 +114,7 @@ import { ResumeService } from '../services/resume.service';
 
       <section id="contact">
         <h2>Contact</h2>
-        <ul class="contact" [@fadeIn]>
+        <ul class="contact" [@staggerList]>
           <li *ngIf="resume()?.email"><strong>Email:</strong> <a [href]="'mailto:' + resume()?.email">{{ resume()?.email }}</a></li>
           <li *ngIf="resume()?.phone"><strong>Phone:</strong> {{ resume()?.phone }}</li>
           <li *ngIf="resume()?.website"><strong>Website:</strong> <a [href]="resume()?.website" target="_blank" rel="noopener">{{ resume()?.website }}</a></li>
@@ -134,8 +134,10 @@ import { ResumeService } from '../services/resume.service';
     :host { display: block; color: var(--fg); background: var(--bg); }
     .nav { position: sticky; top: 0; z-index: 10; display:flex; justify-content:space-between; align-items:center; padding: 1rem 0; background: linear-gradient(180deg, rgba(11,12,16,0.85), rgba(11,12,16,0)); backdrop-filter: blur(6px); }
     .brand { font-weight: 700; text-decoration: none; color: var(--fg); }
-    .links a { margin-left: 1rem; color: var(--muted-fg); text-decoration: none; }
+    .links a { position:relative; margin-left: 1rem; color: var(--muted-fg); text-decoration: none; }
+    .links a::after { content:''; position:absolute; left:0; right:0; bottom:-4px; height:2px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .2s ease; opacity:.85; }
     .links a:hover { color: var(--fg); }
+    .links a:hover::after { transform: scaleX(1); }
     .hero { background: radial-gradient(100% 50% at 50% 0%, rgba(108,92,231,0.16) 0%, transparent 60%); }
     .intro { padding: 3.25rem 0 2.25rem; text-align: center; }
     .intro h1 { margin: .75rem 0 .25rem; font-size: clamp(1.8rem, 3.2vw, 3rem); }
@@ -148,13 +150,14 @@ import { ResumeService } from '../services/resume.service';
     .btn-secondary { background: var(--fg); color: var(--bg); }
     .btn-ghost { background: transparent; color: var(--fg); border: 1px solid var(--border); }
     .avatar { display:flex; justify-content:center; }
-    .avatar img { width: 104px; height: 104px; border-radius: 999px; border: 2px solid var(--border); object-fit: cover; }
+    .avatar img { width: 104px; height: 104px; border-radius: 999px; border: 2px solid var(--border); object-fit: cover; box-shadow: 0 0 0 0 rgba(108,92,231,0.5); animation: pulseGlow 3s ease-in-out infinite; }
     .container { width: min(1100px, 92%); margin: 0 auto; }
     .main { padding: 2rem 0 4rem; }
     section { margin: 2.5rem 0; }
     h2 { font-size: 1.4rem; margin: 0 0 1rem; }
     h3 { margin: 0; font-size: 1.1rem; }
-    .card { border: 1px solid var(--border); border-radius: .8rem; padding: 1rem; margin: 1rem 0; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00)), var(--surface); box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
+    .card { border: 1px solid var(--border); border-radius: .8rem; padding: 1rem; margin: 1rem 0; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00)), var(--surface); box-shadow: 0 6px 20px rgba(0,0,0,0.25); transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease; }
+    .hoverable:hover { transform: translateY(-2px) scale(1.01); border-color: color-mix(in oklab, var(--border) 60%, var(--accent)); box-shadow: 0 12px 28px rgba(0,0,0,0.3); }
     .card-head { display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; }
     .dates { color: var(--muted-fg); white-space: nowrap; }
     .meta { color: var(--muted-fg); }
@@ -175,12 +178,23 @@ import { ResumeService } from '../services/resume.service';
     .tl-item { position: relative; padding-left: 2rem; margin: 1.1rem 0; }
     .tl-dot { position: absolute; left: -.1rem; top: .4rem; width: .8rem; height: .8rem; border-radius: 999px; background: var(--accent); box-shadow: 0 0 0 3px rgba(108,92,231,0.25); }
     .tl-card { padding: 1rem; border: 1px solid var(--border); border-radius: .8rem; background: var(--surface); }
+    @keyframes pulseGlow { 0% { box-shadow: 0 0 0 0 rgba(108,92,231,0.5);} 70% { box-shadow: 0 0 0 12px rgba(108,92,231,0);} 100% { box-shadow: 0 0 0 0 rgba(108,92,231,0);} }
   `,
   animations: [
     trigger('fadeIn', [
       transition(':enter', [
         style({ opacity: 0, transform: 'translateY(8px)' }),
         animate('300ms ease-out', style({ opacity: 1, transform: 'none' }))
+      ])
+    ]),
+    trigger('staggerList', [
+      transition(':enter', [
+        query(':enter', [
+          style({ opacity: 0, transform: 'translateY(10px)' }),
+          stagger(80, [
+            animate('400ms ease-out', style({ opacity: 1, transform: 'none' }))
+          ])
+        ], { optional: true })
       ])
     ])
   ]
@@ -201,3 +215,4 @@ export class HomeComponent {
     });
   }
 }
+
