@@ -42,9 +42,10 @@ import { ResumeService } from '../services/resume.service';
           <p class="loc" *ngIf="resume()?.location">{{ resume()?.location }}</p>
           <p class="summary" *ngIf="resume()?.summary">{{ resume()?.summary }}</p>
           <div class="actions">
-            <a *ngIf="resume()?.github" [href]="resume()?.github" target="_blank" rel="noopener" class="btn">GitHub</a>
-            <a *ngIf="resume()?.linkedin" [href]="resume()?.linkedin" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
-            <a *ngIf="resume()?.website" [href]="resume()?.website" target="_blank" rel="noopener" class="btn btn-ghost">Website</a>
+            <a *ngIf="resume()?.github" [href]="resume()?.github" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+            <a *ngIf="resume()?.linkedin" [href]="resume()?.linkedin" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
+            <a *ngIf="resume()?.website" [href]="resume()?.website" target="_blank" rel="noopener" class="btn btn-outline">Website</a>
+            <a href="assets/Muneeb-Ur-Rehman-Resume.pdf" download class="btn btn-filled">Download Resume</a>
           </div>
         </div>
       </div>
@@ -215,11 +216,25 @@ import { ResumeService } from '../services/resume.service';
     .title { margin: 0; color: var(--muted-fg); font-weight: 600; }
     .loc { margin: .25rem 0 0; color: var(--muted-fg); }
     .summary { max-width: 840px; margin: .9rem auto 1.25rem; color: var(--muted-fg); }
-    .actions { display:flex; gap:.75rem; justify-content:center; }
-    .btn { padding:.6rem 1.1rem; border-radius: .6rem; background: var(--accent); color:#fff; text-decoration:none; transition: transform .08s ease, filter .2s ease; }
-    .btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
-    .btn-secondary { background: var(--fg); color: var(--bg); }
-    .btn-ghost { background: transparent; color: var(--fg); border: 1px solid var(--border); }
+    .actions { display:flex; gap:.75rem; justify-content:center; flex-wrap: wrap; }
+    .btn { position: relative; display:inline-block; padding:.6rem 1.1rem; border-radius: .6rem; text-decoration:none; font-weight:600; transition: transform .1s ease, box-shadow .2s ease, filter .2s ease, background .2s ease, color .2s ease; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-outline { border: 1px solid transparent; color: var(--fg);
+      background:
+        linear-gradient(var(--surface), var(--surface)) padding-box,
+        linear-gradient(135deg, var(--accent), color-mix(in oklab, var(--accent) 60%, #ffffff)) border-box;
+      box-shadow: 0 0 0 0 rgba(108,92,231,0);
+    }
+    .btn-outline:hover { box-shadow: 0 6px 18px rgba(108,92,231,0.28); filter: brightness(1.05); }
+    .btn-filled { color: #0b0c10; border: 1px solid transparent;
+      background: linear-gradient(135deg, var(--accent), color-mix(in oklab, var(--accent) 70%, #ffffff));
+      box-shadow: 0 6px 18px rgba(108,92,231,0.32);
+    }
+    .btn-filled:hover { filter: brightness(1.05); box-shadow: 0 10px 26px rgba(108,92,231,0.38); }
+    .btn-download { position: relative; overflow: hidden; background: linear-gradient(90deg, var(--accent), color-mix(in oklab, var(--accent) 70%, #ffffff)); color: #0b0c10; border: none; font-weight: 700; letter-spacing: .2px; }
+    .btn-download::after { content: ""; position: absolute; inset: -20% -140% -20% -140%; background: linear-gradient(120deg, transparent, rgba(255,255,255,.6), transparent); transform: skewX(-20deg); opacity: 0; }
+    .btn-download:hover::after { animation: shine 650ms ease forwards; }
+    @keyframes shine { 0% { transform: translateX(-60%) skewX(-20deg); opacity:0;} 40%{opacity:.5;} 100% { transform: translateX(60%) skewX(-20deg); opacity:0; } }
     .avatar { display:flex; justify-content:center; }
     .avatar img { width: 104px; height: 104px; border-radius: 999px; border: 2px solid var(--border); object-fit: cover; box-shadow: 0 0 0 0 rgba(108,92,231,0.5); animation: pulseGlow 3s ease-in-out infinite; }
     .container { width: min(1100px, 92%); margin: 0 auto; }
