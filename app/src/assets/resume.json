@@ -118,7 +118,7 @@
   {
     "name": "Human Resource Management System (HRMS)",
     "description": "A complete HRM system built from the ground up, covering the entire employee lifecycle from joining to resignation.",
-    "url": "",
+    "url": "http://69.197.152.150:9809/",
     "repo": "",
     "highlights": [
       "Designed and developed modules for payroll, salary-on-roll, leave management, and clearance workflows.",
@@ -132,7 +132,7 @@
   {
     "name": "Loom Management System",
     "description": "A web-based control and monitoring panel for weaving machines, providing detailed production tracking, reporting, and efficiency analytics.",
-    "url": "https://weavingautomation.colossys.com:8081/",
+    "url": "http://69.197.152.150:9810/",
     "repo": "",
     "highlights": [
       "Developed panel to monitor loom status and machine performance in real time.",
