@@ -153,6 +153,18 @@
       "Implemented efficient C# game scripts for smooth performance."
     ],
     "technologies": ["Unity3D", "C#", "Android", "Game Development"]
+  },
+  {
+    "name": "Portfolio Website",
+    "description": "A personal portfolio website showcasing projects, skills, and experience.",
+    "url": "https://muneebtech.net/",
+    "repo": "https://github.com/muneebctml/portfolio-muneeb",
+    "highlights": [
+      "Developed a responsive and modern portfolio website using Angular.",
+      "Showcased projects, skills, and professional experience effectively.",
+      "Implemented SEO best practices to enhance online visibility."
+    ],
+    "technologies": ["Angular", "TypeScript", "HTML5", "CSS3", "Bootstrap"]
   }
 ],
   "education": [
