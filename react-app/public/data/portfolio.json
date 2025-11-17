@@ -1,461 +1,326 @@
 {
   "personalInfo": {
-    "name": "Mahnoor Ghalib",
-    "title": "Senior Software QA Engineer | Automation | Mobile & API Testing | Performance & Quality Excellence",
-    "email": "mahnoorghalib3@gmail.com",
-    "phone": "+49 176 76482033, +92 305 961 5501",
-    "location": "Lahore, Pakistan",
+    "name": "Muneeb Ur Rehman",
+    "title": "Full Stack Developer | .NET | Angular | SQL",
+    "email": "muneebur047@gmail.com",
+    "phone": "+92 300 601 7047",
+    "location": "",
     "picture": "/Profile-Muneeb.jpeg",
-    "summary": "Senior QA Engineer with over 5 years of experience in web, mobile, and API testing across fintech, ride-hailing, and healthcare domains. Skilled in building automation frameworks, designing detailed test strategies, and ensuring quality across full SDLC. Experienced in working with Agile teams, performing production-level validations, and collaborating with cross-functional stakeholders to deliver high-performing, stable, and secure software products. Strong background in research, AI, and data-driven testing with exposure to ML-based problem-solving.",
+    "summary": "Full Stack Developer with 6+ years of experience building scalable ERP systems, APIs, and enterprise web applications using .NET, Azure, and modern front-end frameworks (React, Angular). Specialized in Microsoft Dynamics GP customization, SQL performance optimization, and CI/CD automation. Proven leader in mentoring teams, driving digital transformation, and delivering secure, high-performance solutions for global clients.",
     "cvUrl": "/Muneeb-Ur-Rehman-Resume.pdf",
-    "website": "https://mahnoorghalib.com",
-    "linkedin": "https://www.linkedin.com/in/mahnoor-ghalib-b498311b7/",
-    "github": ""
+    "website": "http://muneebtech.net/",
+    "linkedin": "https://www.linkedin.com/in/muneebur047/",
+    "github": "https://github.com/muneebctml"
   },
   "experience": [
     {
       "id": 1,
-      "title": "Senior QA Engineer",
-      "company": "Jeeny Pakistan",
-      "location": "Remote / Lahore, Pakistan",
-      "startDate": "2023-10",
+      "title": "Senior Software Engineer",
+      "company": "Tuli",
+      "location": "Remote",
+      "startDate": "2024-07",
       "endDate": null,
       "current": true,
-      "description": "Lead QA activities for Jeeny’s Driver and Passenger mobile applications, along with supporting backend systems such as Blade, Backoffice, and Cockpit. Responsible for ensuring product stability across Android and iOS platforms, validating APIs, SDKs, databases, and production releases in an Agile environment.",
+      "description": "Senior Software Engineer at Tuli.",
       "highlights": [
-        "Created detailed Test Plans and Test Cases for multiple app features to ensure full QA coverage and release readiness.",
-        "Performed end-to-end QA across Driver and Passenger mobile applications, covering UI/UX validation, regression, smoke, integration, sanity, UAT, and production release testing.",
-        "Tested and validated backend tools such as Blade, Backoffice, and Cockpit to ensure accurate data synchronization and seamless operational workflows.",
-        "Conducted payment flow validation for multiple gateways, ensuring accuracy and security in wallet transactions, ride charges, and refunds.",
-        "Led API testing and validation using Postman and Swagger, verifying endpoints for booking, location, ride management, and payment systems.",
-        "Performed database validation and backend testing using MySQL, MongoDB, and Redis DB to ensure data integrity and transaction accuracy.",
-        "Monitored application performance using New Relic and Elastic Search to detect anomalies, crashes, and performance bottlenecks.",
-        "Integrated and validated 3rd-party SDKs such as CleverTap, Firebase, Adjust, Embrace, UXCam, and Elastic Search, ensuring accurate analytics, tracking, and crash reporting.",
-        "Built and executed UI automation scripts for critical app modules to enhance regression efficiency and reduce manual effort.",
-        "Defined test exit criteria for production releases, collaborating closely with developers and DevOps to maintain quality gates and defect thresholds.",
-        "Conducted cross-platform testing for Android and iOS to ensure performance consistency across devices, OS versions, and screen resolutions.",
-        "Performed UAT and post-release validation to ensure seamless app performance in live production environments.",
-        "Utilized Jira for defect management, TestRail for test case management, and Confluence for documentation and QA process alignment.",
-        "Collaborated in Agile/Scrum sprints—actively participating in sprint planning, retrospectives, and daily stand-ups.",
-        "Mentored junior QA engineers, introduced test design improvements, and standardized defect reporting for improved developer–QA collaboration."
+        "End-to-end ERP system development with .NET 9 and React.",
+        "Built CI/CD pipelines with GitLab and Docker, streamlining deployments.",
+        "Optimized PostgreSQL & ClickHouse for improved reporting and reduced costs."
       ],
       "technologies": [
-        "Regression Testing",
-        "UAT Testing",
-        "Production Release Testing",
-        "API Testing",
-        "Database Testing (MySQL, MongoDB, Redis)",
-        "Blade",
-        "Backoffice",
-        "Cockpit",
-        "CleverTap",
-        "Embrace",
-        "Elastic Search",
-        "New Relic",
-        "Adjust",
-        "Firebase",
-        "UXCam",
-        "Postman",
-        "Swagger",
-        "TestRail",
-        "Jira",
-        "Confluence",
-        "Automation (Appium)",
-        "Agile (Scrum)"
+        "React",
+        ".NET 9",
+        "PostgreSQL",
+        "ClickHouse",
+        "Docker",
+        "GitLab CI/CD",
+        "Hangfire"
       ]
     },
     {
       "id": 2,
-      "title": "Semi QA Automation Engineer",
+      "title": "Software Engineer",
       "company": "Integriti Pvt Ltd",
       "location": "Lahore, Pakistan",
       "startDate": "2023-10",
-      "endDate": "2024-02",
+      "endDate": "2024-07",
       "current": false,
-      "description": "Worked with US-based client ServRx on a healthcare web platform, ensuring quality across UI, API, and database layers through structured manual and automated testing processes.",
+      "description": "Software Engineer at Integriti Pvt Ltd.",
       "highlights": [
-        "Conducted comprehensive UI, functional, API, and database testing for a HIPAA-compliant healthcare platform.",
-        "Performed manual SQL testing in Azure SQL and validated data integrity through query-based verification.",
-        "Executed UI testing for web modules built with Razor Pages and jQuery, focusing on usability and layout accuracy.",
-        "Validated backend processes including invoicing, PDF generation, and email notifications.",
-        "Collaborated directly with US client ServRx during daily scrums to align QA priorities and discuss sprint goals.",
-        "Logged, tracked, and managed bugs using Trello board to ensure transparency and progress tracking.",
-        "Wrote and maintained automation scripts with Selenium WebDriver to validate core web workflows.",
-        "Verified API endpoints using Postman and Swagger for response accuracy and reliability.",
-        "Created detailed test documentation, test cases, and bug reports to maintain full QA traceability.",
-        "Ensured HIPAA compliance in data handling and testing processes."
+        "Developed HIPAA-compliant healthcare platform using .NET 7 & Azure SQL.",
+        "Automated invoicing, PDF generation, and email notifications.",
+        "Enhanced Razor Pages UI with jQuery for better client experience."
       ],
       "technologies": [
-        "UI Testing",
-        "Functional Testing",
-        "API Testing",
-        "Database Testing (SQL)",
+        ".NET 7",
         "Azure SQL",
-        "Selenium WebDriver",
-        "Postman",
-        "Swagger",
-        "Trello",
         "Razor Pages",
         "jQuery",
-        "Agile (Scrum)",
-        "HIPAA Compliance"
+        "JavaScript"
       ]
     },
     {
       "id": 3,
-      "title": "Automation Engineer",
-      "company": "Autosoft Dynamics Pvt Ltd",
+      "title": "Software Engineer",
+      "company": "Technomics",
       "location": "Lahore, Pakistan",
-      "startDate": "2020-10",
-      "endDate": "2023-10",
+      "startDate": "2022-12",
+      "endDate": "2024-03",
       "current": false,
-      "description": "Worked on automation and manual testing of AutoSoft’s banking solutions including core and credit modules, loan management, trade finance, and transactional systems. Initially focused on manual testing to gain deep domain knowledge before designing automation frameworks for financial workflows.",
+      "description": "Software Engineer at Technomics.",
       "highlights": [
-        "Performed comprehensive manual testing across core banking, loan, credit, and trade finance modules to ensure system reliability and business logic accuracy.",
-        "Developed and maintained automation frameworks using Selenium WebDriver for regression and smoke testing.",
-        "Automated functional flows within the Auto Banker III web platform, including account creation, loan disbursement, payment schedules, and transaction validations.",
-        "Conducted database testing in MySQL to validate data accuracy, financial calculations, and ledger synchronization.",
-        "Executed API testing for transaction and reporting endpoints ensuring reliable backend integrations.",
-        "Performed load and performance testing using Apache JMeter for high-volume transaction scenarios.",
-        "Logged, tracked, and managed bugs, daily tasks, and sprint tickets through Azure DevOps for full QA transparency.",
-        "Collaborated with developers and domain experts to validate system workflows and financial transaction accuracy.",
-        "Created detailed test plans, scenarios, and defect documentation as part of SDLC/STLC best practices.",
-        "Improved automation coverage across core modules, reducing manual regression effort by 40%."
+        "Architected enterprise applications with ASP.NET MVC & .NET 7.",
+        "Implemented Identity Server for secure authentication & authorization.",
+        "Designed Azure-based services for real-time data processing."
       ],
       "technologies": [
-        "UI Testing",
-        "Functional Testing",
-        "API Testing",
-        "Database Testing (MySQL)",
-        "Selenium WebDriver",
-        "Automation Frameworks",
-        "Apache JMeter",
-        "Azure DevOps",
-        "Core Banking QA",
-        "Credit Module Testing",
-        "Trade Finance",
-        "Agile (Scrum)",
-        "SDLC/STLC"
+        ".NET 7",
+        "ASP.NET MVC",
+        "Identity Server",
+        "Azure",
+        "REST APIs",
+        "Angular",
+        "CI/CD"
       ]
     },
     {
       "id": 4,
-      "title": "Quality Engineer Intern",
-      "company": "Autosoft Dynamics Pvt Ltd",
-      "location": "Lahore, Pakistan",
-      "startDate": "2020-10",
-      "endDate": "2020-10",
+      "title": "Technical Lead",
+      "company": "Colony Textile Mills",
+      "location": "Multan, Pakistan",
+      "startDate": "2019-07",
+      "endDate": "2022-12",
       "current": false,
-      "description": "Gained hands-on experience in software quality assurance within the financial domain, assisting senior QA engineers in testing and documentation for core banking web modules.",
+      "description": "Technical Lead at Colony Textile Mills.",
       "highlights": [
-        "Created and executed detailed test cases for web-based banking modules under guidance of senior QA engineers.",
-        "Performed regression and functional testing after code deployments to ensure feature stability.",
-        "Documented identified defects with clear reproduction steps and collaborated with developers for resolution.",
-        "Assisted in preparing early-stage QA documentation including test plans, checklists, and module-level reports.",
-        "Learned core SDLC and STLC processes used in enterprise-level QA environments."
+        "Customized Microsoft Dynamics GP ERP, boosting finance operations.",
+        "Integrated biometric and face scanning systems for 5,000+ employees.",
+        "Directed in-house HRM & POS app development, cutting vendor costs."
       ],
       "technologies": [
-        "Manual Testing",
-        "Regression Testing",
-        "Bug Reporting",
-        "Test Case Design",
-        "SDLC/STLC",
-        "QA Documentation"
+        "Microsoft Dynamics GP",
+        "Dexterity",
+        "SSRS",
+        "Crystal Reports",
+        ".NET",
+        "Angular",
+        "SQL Server"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Unity Game Developer",
+      "company": "Desire Studio",
+      "location": "Lahore, Pakistan",
+      "startDate": "2018-01",
+      "endDate": "2019-06",
+      "current": false,
+      "description": "Unity Game Developer at Desire Studio.",
+      "highlights": [
+        "Developed and published Android games on Google Play Store.",
+        "Designed immersive environments and wrote efficient C# game scripts.",
+        "Built responsive UI/UX for mobile gameplay."
+      ],
+      "technologies": [
+        "Unity3D",
+        "C#",
+        "Android",
+        "Game Development"
       ]
     }
   ],
   "education": [
     {
       "id": 1,
-      "degree": "Master of Science in Artificial Intelligence",
-      "institution": "Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)",
-      "location": "Erlangen, Germany",
-      "graduationYear": "Present",
+      "degree": "BS Computer Science",
+      "institution": "Bahauddin Zakariya University - BZU",
+      "location": "Multan, Pakistan",
+      "graduationYear": "2019",
       "gpa": null,
       "highlights": [
-        "Studying AI-1 (Foundations of Artificial Intelligence) covering search, logic, and probabilistic reasoning.",
-        "Enrolled in SMAI (Statistical Methods in AI) focused on probability theory, inference, and statistical modeling.",
-        "Learning Deep Learning concepts including neural networks, CNNs, and transformers.",
-        "Exploring Pattern Recognition techniques such as classification, clustering, and dimensionality reduction.",
-        "Developing strong coding fundamentals in Advanced Programming Techniques course.",
-        "Participating in lab work and group assignments emphasizing algorithmic thinking and experimentation."
-      ],
-      "technologies": [
-        "Currently focusing on theoretical foundations and coursework; practical implementation begins in upcoming semesters."
+        "Completed coursework in software engineering, database systems, and distributed computing.",
+        "Graduated with strong focus on .NET development, web technologies, and cloud computing.",
+        "Led multiple academic projects including an ERP module and mobile applications.",
+        "Actively participated in coding competitions and university hackathons.",
+        "Developed a final year project integrating .NET, SQL Server, and cloud services."
       ]
-    },
-    {
-      "id": 2,
-      "degree": "Masters in Computer Science",
-      "institution": "University of Engineering and Technology, Lahore",
-      "location": "Lahore, Pakistan",
-      "graduationYear": "2023",
-      "gpa": null,
-      "highlights": [
-        "Completed coursework in Advanced Operating Systems, Advanced Computer Architecture, and Theory of Computation.",
-        "Studied Advanced Algorithm Analysis, Machine Learning, and Intelligent Agents for AI-based problem solving.",
-        "Explored emerging technologies in Cloud Computing, Advanced Software Engineering, and Web Engineering.",
-        "Worked on Natural Language Processing projects focusing on sentiment analysis and language modeling.",
-        "Conducted ML research in sentiment analysis for Urdu text data under guidance of a university professor.",
-        "Developed hands-on expertise in Python and ML libraries such as Scikit-learn, TensorFlow, and Pandas.",
-        "Engaged in academic research projects integrating AI and data-driven testing techniques."
-      ],
-      "technologies": [
-        "Python",
-        "Machine Learning",
-        "Artificial Intelligence",
-        "Natural Language Processing",
-        "Sentiment Analysis",
-        "Scikit-learn",
-        "TensorFlow",
-        "Pandas",
-        "Algorithms",
-        "Cloud Computing",
-        "Advanced Software Engineering"
-      ]
-    },
-    {
-      "id": 3,
-      "degree": "Bachelors in Computer Science",
-      "institution": "University of Engineering and Technology, Lahore",
-      "location": "Lahore, Pakistan",
-      "graduationYear": "2020",
-      "gpa": null,
-      "highlights": [
-        "Completed core courses including Data Structures and Algorithms, Object Oriented Programming, Operating Systems, Database Systems, and Computer Networks.",
-        "Studied advanced subjects such as Artificial Intelligence, Machine Learning, Digital Image Processing, and Compiler Construction.",
-        "Explored Computer Architecture, Software Engineering, Web Technologies, and Management Information Systems.",
-        "Developed a final year web application for scholarship management, enabling student registration, eligibility verification, and automated record handling using .NET and SQL Server.",
-        "Applied theoretical and mathematical knowledge from Probability, Statistics, Linear Algebra, and Numerical Analysis in computational projects.",
-        "Worked on group-based software development projects following Agile principles, focusing on scalability, modularity, and clean code practices.",
-        "Participated in coding competitions, academic seminars, and hackathons organized by UET Lahore."
-      ],
-      "technologies": [
-        "Python",
-        "C++",
-        "SQL Server",
-        "HTML/CSS/JavaScript",
-        "Artificial Intelligence",
-        "Machine Learning",
-        "Web Application Development",
-        "Database Systems",
-        "Software Engineering",
-        "Computer Networks",
-        "Compiler Construction",
-        "Digital Image Processing",
-        "Operating Systems"
-      ]
-    },
-    {
-      "id": 4,
-      "degree": "Intermediate",
-      "institution": "Punjab College Jalal Pur Jattan",
-      "location": "Gujrat, Pakistan",
-      "graduationYear": "2016",
-      "gpa": null,
-      "highlights": []
     }
   ],
   "skills": [
     {
-      "category": "Core Skills",
+      "category": "Technical Skills",
       "items": [
-        "Automation Framework Development (Selenium, Appium)",
-        "Manual, Regression, Smoke, and Integration Testing",
-        "API Testing & Validation (Postman, Swagger)",
-        "Performance & Load Testing (Apache JMeter)",
-        "Database Testing (MySQL, MongoDB, Redis)",
-        "UI/UX Testing for Android & iOS Applications",
-        "Third-party SDK Validation (CleverTap, Firebase, Adjust, Embrace, UXCam, Elastic Search, New Relic)",
-        "Test Planning, Test Case Design, and UAT Execution",
-        "Agile/Scrum Methodologies – Sprint Planning, Reviews, Retrospectives",
-        "Defect Tracking & Reporting (Jira, Azure DevOps, Trello)",
-        "Collaboration, Client Communication & Cross-functional Coordination"
+        "C#, .NET (Core, MVC, Web API), ASP.NET, Entity Framework Core",
+        "JavaScript, TypeScript, Angular, React",
+        "SQL Server, T-SQL, Database Design",
+        "Azure DevOps, CI/CD Pipelines",
+        "HTML5, CSS3, SCSS, Bootstrap",
+        "RESTful APIs, Microservices Architecture",
+        "Agile Methodologies, Scrum"
       ]
     }
   ],
   "tools": [
-    "Jira",
-    "Confluence",
-    "TestRail",
-    "Azure DevOps",
-    "Trello",
+    "Git",
+    "Docker",
     "Postman",
-    "Swagger",
-    "Apache JMeter",
-    "Selenium WebDriver",
-    "Appium",
-    "Python",
-    "C#",
-    "SQL",
-    "MySQL",
-    "MongoDB",
-    "Redis",
-    "Elastic Search",
-    "New Relic",
-    "Git/GitHub",
-    "CI/CD",
-    "Agile (Scrum)",
-    "MATLAB"
+    "Visual Studio",
+    "Azure DevOps",
+    "SQL Server Management Studio"
   ],
   "projects": [
     {
       "id": 1,
-      "name": "Jeeny Passenger App",
-      "description": "End-to-end testing for Jeeny Passenger mobile application covering user journeys, payments, and analytics validation.",
+      "name": "ERP System for Textile Industry",
+      "description": "An enterprise ERP platform developed to streamline finance, HR, and operations for a textile company.",
       "url": "",
       "repo": "",
       "link": "",
+      "image": "",
       "highlights": [
-        "Tested full customer ride experience including registration, ride booking, payments, and feedback flows.",
-        "Executed UI and functional test cases ensuring seamless performance across diverse devices and network conditions.",
-        "Integrated and verified event tracking & push notification analytics using Firebase, CleverTap, and Adjust.",
-        "Automated repetitive test cases for core flows, reducing regression time by 40%."
+        "Customized Microsoft Dynamics GP ERP with in-house modules.",
+        "Integrated biometric devices for attendance tracking of 5,000+ employees.",
+        "Improved financial reporting speed by 30% with optimized SQL queries."
       ],
       "technologies": [
-        "Mobile Testing",
-        "UI Testing",
-        "Automation",
-        "Postman",
-        "Firebase",
-        "CleverTap",
-        "Adjust"
+        ".NET",
+        "Microsoft Dynamics GP",
+        "SQL Server",
+        "SSRS",
+        "Angular"
       ]
     },
     {
       "id": 2,
-      "name": "Jeeny Driver App",
-      "description": "Comprehensive QA for Jeeny Driver mobile application, validating performance, APIs, and SDK integrations.",
+      "name": "Healthcare Compliance Platform",
+      "description": "A HIPAA-compliant web application enabling secure patient data management, billing, and reporting.",
       "url": "",
       "repo": "",
       "link": "",
+      "image": "",
       "highlights": [
-        "Validated driver onboarding, trip management, navigation, and earnings modules.",
-        "Conducted API testing for driver payout, trip tracking, and status update endpoints.",
-        "Designed and maintained test documentation in TestRail, linking requirements, test cases, and defects for better traceability.",
-        "Improved app stability and reduced crash rates by collaborating with developers using data from Embrace and UXCam."
-      ],
-      "technologies": [
-        "Mobile QA",
-        "API Testing",
-        "Regression",
-        "Postman",
-        "TestRail",
-        "Embrace",
-        "UXCam"
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Mobile Apps Automation (Driver & Passenger)",
-      "description": "Developed automation scripts for Jeeny Driver and Passenger mobile applications to improve regression efficiency and coverage.",
-      "url": "",
-      "repo": "",
-      "link": "",
-      "highlights": [
-        "Built UI automation scripts for both Driver and Passenger apps, focusing on login, onboarding, ride creation, and core journey flows.",
-        "Used Appium for Android and iOS automation, validating key modules including maps, trip lifecycle, and push notifications.",
-        "Developed modular test scripts with reusable functions to support regression and smoke testing cycles.",
-        "Linked automated results with TestRail and reported outcomes via Jira to maintain traceability.",
-        "Reduced manual regression time by 40% and increased coverage for critical business paths."
-      ],
-      "technologies": [
-        "Appium",
-        "Selenium",
-        "Automation",
-        "Regression",
-        "TestRail",
-        "Jira"
-      ]
-    },
-    {
-      "id": 4,
-      "name": "API Automation (Basic Level)",
-      "description": "Basic API automation for selected endpoints to validate responses, data integrity, and backend communication.",
-      "url": "",
-      "repo": "",
-      "link": "",
-      "highlights": [
-        "Implemented API automation for multiple features to validate response codes, payloads, and data accuracy.",
-        "Used Postman and Swagger for endpoint validation, schema checks, and test documentation.",
-        "Focused on verifying core system stability and backend communication between modules.",
-        "Collaborated with backend developers to identify inconsistencies and improve API reliability."
-      ],
-      "technologies": [
-        "Postman",
-        "Swagger",
-        "API Testing",
-        "Smoke Testing",
-        "Automation",
-        "Confluence",
-        "Git"
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Workers’ Compensation Claims Processing System",
-      "description": "Confidential project for claims processing with QA automation.",
-      "url": "",
-      "repo": "",
-      "link": "",
-      "highlights": [
-        "Performed functional, regression, and automation testing.",
-        "Engaged directly with stakeholders for requirements validation."
-      ],
-      "technologies": [
-        "Manual Testing",
-        "Automation",
-        "Performance Testing"
-      ]
-    },
-    {
-      "id": 6,
-      "name": "ServRx Healthcare Platform",
-      "description": "Web-based healthcare management platform for claims and invoicing, built with .NET 7 and Azure SQL.",
-      "url": "",
-      "repo": "",
-      "link": "",
-      "highlights": [
-        "Performed UI and functional testing for healthcare workflows including claims processing and invoicing.",
-        "Validated database consistency and backend data synchronization through manual SQL queries.",
-        "Conducted API validation using Postman and Swagger to ensure stable integration between web and backend systems.",
-        "Tested automated invoice generation, PDF creation, and email notification modules.",
-        "Collaborated with US client team during scrums to deliver QA feedback and risk assessment."
+        "Developed core backend using .NET 7 and Azure SQL.",
+        "Automated invoicing, PDF reports, and email notifications.",
+        "Enhanced usability with interactive Razor Pages and jQuery."
       ],
       "technologies": [
         ".NET 7",
         "Azure SQL",
-        "Postman",
-        "Swagger",
-        "Selenium WebDriver",
-        "Trello",
-        "Web Application QA"
+        "Razor Pages",
+        "jQuery"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Cloud-Based ERP Reporting System",
+      "description": "A reporting solution for ERP systems designed to handle large-scale financial and operational datasets.",
+      "url": "",
+      "repo": "",
+      "link": "",
+      "image": "",
+      "highlights": [
+        "Optimized PostgreSQL & ClickHouse queries, reducing data processing costs by 25%.",
+        "Implemented CI/CD pipelines with GitLab and Docker.",
+        "Delivered real-time dashboards for executives and stakeholders."
+      ],
+      "technologies": [
+        ".NET 9",
+        "React",
+        "PostgreSQL",
+        "ClickHouse",
+        "Docker",
+        "GitLab CI/CD"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Human Resource Management System (HRMS)",
+      "description": "A complete HRM system built from the ground up, covering the entire employee lifecycle from joining to resignation.",
+      "url": "http://69.197.152.150:9809/",
+      "repo": "",
+      "link": "http://69.197.152.150:9809/",
+      "image": "",
+      "highlights": [
+        "Designed and developed modules for payroll, salary-on-roll, leave management, and clearance workflows.",
+        "Implemented user-based access rights for secure role management.",
+        "Integrated with biometric devices (fingerprint, barcode) for attendance tracking.",
+        "Connected with ERP for seamless financial and operational reporting.",
+        "Automated reporting with SSRS for HR and finance departments."
+      ],
+      "technologies": [
+        ".NET",
+        "Razor Pages",
+        "AngularJS",
+        "MSSQL",
+        "SSRS",
+        "jQuery",
+        "Biometric SDKs",
+        "ERP Integration"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Loom Management System",
+      "description": "A web-based control and monitoring panel for weaving machines, providing detailed production tracking, reporting, and efficiency analytics.",
+      "url": "http://69.197.152.150:9810/",
+      "repo": "",
+      "link": "http://69.197.152.150:9810/",
+      "image": "",
+      "highlights": [
+        "Developed panel to monitor loom status and machine performance in real time.",
+        "Enabled supervisors to control weaving functions and track downtime.",
+        "Built reporting dashboards to measure production efficiency and output trends.",
+        "Integrated with ERP for unified textile production management."
+      ],
+      "technologies": [
+        ".NET",
+        "Razor Pages",
+        "AngularJS",
+        "MSSQL",
+        "SSRS",
+        "jQuery",
+        "ERP Integration"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Android Games (Unity3D)",
+      "description": "Multiple mobile games developed and published on Google Play Store.",
+      "url": "",
+      "repo": "",
+      "link": "",
+      "image": "",
+      "highlights": [
+        "Designed immersive gameplay and responsive UI/UX.",
+        "Published Android titles gaining thousands of downloads.",
+        "Implemented efficient C# game scripts for smooth performance."
+      ],
+      "technologies": [
+        "Unity3D",
+        "C#",
+        "Android",
+        "Game Development"
       ]
     },
     {
       "id": 7,
-      "name": "Automation of Web Application – Auto Banker III",
-      "description": "Developed and executed automation framework for AutoSoft’s core and credit banking modules, ensuring reliability and efficiency across multiple financial workflows.",
-      "url": "",
-      "repo": "",
-      "link": "",
+      "name": "Portfolio Website",
+      "description": "A personal portfolio website showcasing projects, skills, and experience.",
+      "url": "https://muneebtech.net/",
+      "repo": "https://github.com/muneebctml/portfolio-muneeb",
+      "link": "https://github.com/muneebctml/portfolio-muneeb",
+      "image": "",
       "highlights": [
-        "Automated core and credit modules within Auto Banker III including loan management, payments, and reporting workflows.",
-        "Performed end-to-end testing and regression automation for financial modules ensuring data integrity and transaction accuracy.",
-        "Worked closely with major banking clients including PPCBL, FINCA, Sindh Bank, APNA Bank, Al Baraka, and FWBL.",
-        "Designed reusable test scripts and maintained automation test suites integrated with CI/CD pipelines.",
-        "Validated load and stress performance of transactional systems using Apache JMeter.",
-        "Tracked testing activities, bug reports, and automation builds through Azure DevOps."
+        "Developed a responsive and modern portfolio website using Angular.",
+        "Showcased projects, skills, and professional experience effectively.",
+        "Implemented SEO best practices to enhance online visibility."
       ],
       "technologies": [
-        "Automation Framework",
-        "Regression Testing",
-        "Load Testing",
-        "Selenium WebDriver",
-        "Apache JMeter",
-        "MySQL",
-        "MongoDB",
-        "Azure DevOps"
+        "Angular",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "Bootstrap"
       ]
     }
   ],
