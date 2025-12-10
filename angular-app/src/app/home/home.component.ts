@@ -54,7 +54,7 @@ import { ResumeService } from '../services/resume.service';
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.93 6h-3.22a15.8 15.8 0 0 0-1.2-3.38A8.03 8.03 0 0 1 18.93 8ZM12 4c.8 0 2.01 1.59 2.69 4H9.31C9.99 5.59 11.2 4 12 4ZM7.49 4.62A15.8 15.8 0 0 0 6.29 8H3.07A8.03 8.03 0 0 1 7.49 4.62ZM4.07 10h2.01c-.05.66-.08 1.32-.08 2s.03 1.34.08 2H4.07A7.96 7.96 0 0 1 4 12c0-.68.03-1.34.07-2Zm.86 6h3.22c.32 1.2.74 2.4 1.2 3.38A8.03 8.03 0 0 1 4.93 16Zm7.07 3.99c-.8 0-2.01-1.59-2.69-3.99h5.38c-.68 2.4-1.89 3.99-2.69 3.99ZM17.71 16h3.22a8.03 8.03 0 0 1-4.44 3.38c.46-.98.88-2.18 1.2-3.38ZM19.93 14h-2.01c.05-.66.08-1.32.08-2s-.03-1.34-.08-2h2.01c.04.66.07 1.32.07 2s-.03 1.34-.07 2Zm-3.64-6c.05.66.08 1.32.08 2s-.03 1.34-.08 2H7.71c-.05-.66-.08-1.32-.08-2s.03-1.34.08-2h8.58Z"/></svg>
               Website
             </a>
-            <a href="assets/Muneeb-Ur-Rehman-Resume.pdf" download class="btn btn-filled" title="Download resume PDF" aria-label="Download resume PDF">
+            <a href="assets/MahnoorGhalib_Resume.pdf" download class="btn btn-filled" title="Download resume PDF" aria-label="Download resume PDF">
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.3a1 1 0 0 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4A1 1 0 0 1 8.7 10.3L11 12.59V4a1 1 0 0 1 1-1Zm-7 14a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"/></svg>
               Download Resume
             </a>
