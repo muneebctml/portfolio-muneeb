@@ -37,9 +37,13 @@ Edit `angular-app/src/assets/resume.json` with your details. Changes appear on r
 Production build served by Nginx:
 
 1. `docker compose up --build`
-2. Open http://localhost:8080
+2. Open http://localhost:9999
+
+Use a different port:
+
+- PowerShell: `$env:PORT=3000; docker compose up --build`
+- Bash: `PORT=3000 docker compose up --build`
 
 ## More
 
 For Angular CLI tips and scaffolding commands, see `angular-app/README.md`.
-

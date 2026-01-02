@@ -21,7 +21,12 @@ Run `ng generate component component-name` to generate a new component. You can 
 From the repo root:
 
 1. `docker compose up --build`
-2. Open `http://localhost:8080`
+2. Open `http://localhost:9999`
+
+Use a different port:
+
+- PowerShell: `$env:PORT=3000; docker compose up --build`
+- Bash: `PORT=3000 docker compose up --build`
 
 ## Update your resume
 

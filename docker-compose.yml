@@ -4,6 +4,5 @@ services:
       context: ./angular-app
       dockerfile: Dockerfile
     ports:
-      - "8080:80"
+      - "${PORT:-9999}:80"
     restart: unless-stopped
-
