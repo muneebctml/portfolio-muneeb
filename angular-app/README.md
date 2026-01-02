@@ -28,6 +28,17 @@ Use a different port:
 - PowerShell: `$env:PORT=3000; docker compose up --build`
 - Bash: `PORT=3000 docker compose up --build`
 
+## Admin dashboard (analytics)
+
+Tracks visitors/sessions/page time and exposes an admin UI:
+
+- Login: `http://localhost:9999/admin/login`
+- Dashboard: `http://localhost:9999/admin/dashboard`
+
+Defaults are set in `docker-compose.yml` (change for real deployments):
+
+- `ADMIN_USERNAME`, `ADMIN_PASSWORD`, `JWT_SECRET`
+
 ## SEO (Google friendly)
 
 This project is configured for SSR + prerender (SSG) so the generated `dist/app/browser/index.html` contains real page content and meta tags (better for crawlers and link previews).

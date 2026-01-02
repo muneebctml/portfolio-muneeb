@@ -8,12 +8,17 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-FROM nginx:1.27-alpine
+FROM node:20-alpine AS runtime
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-RUN rm -rf /usr/share/nginx/html/*
-COPY --from=build /app/dist/app/browser /usr/share/nginx/html
+WORKDIR /app
+ENV NODE_ENV=production
+ENV PORT=4000
 
-EXPOSE 80
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev
 
-CMD ["nginx", "-g", "daemon off;"]
+COPY --from=build /app/dist ./dist
+
+EXPOSE 4000
+
+CMD ["node", "dist/app/server/server.mjs"]

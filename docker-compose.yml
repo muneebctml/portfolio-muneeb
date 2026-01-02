@@ -4,5 +4,16 @@ services:
       context: ./angular-app
       dockerfile: Dockerfile
     ports:
-      - "${PORT:-9999}:80"
+      - "${PORT:-9999}:4000"
+    environment:
+      PORT: "4000"
+      ANALYTICS_DATA_DIR: "/app/.data"
+      ADMIN_USERNAME: "${ADMIN_USERNAME:-muneebur047}"
+      ADMIN_PASSWORD: "${ADMIN_PASSWORD:-portal@123..!}"
+      JWT_SECRET: "${JWT_SECRET:-d5e693e7889e783e7c3f28fb9023333eabf3999fcc5668f8403bf8e6870991c1}"
+    volumes:
+      - portfolio_data:/app/.data
     restart: unless-stopped
+
+volumes:
+  portfolio_data:

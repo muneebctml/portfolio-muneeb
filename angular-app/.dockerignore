@@ -4,9 +4,9 @@ dist
 .vscode
 .vs
 coverage
+.data
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .DS_Store
-

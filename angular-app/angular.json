@@ -40,6 +40,9 @@
               "src/styles.scss"
             ],
             "scripts": [],
+            "allowedCommonJsDependencies": [
+              "jsonwebtoken"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
