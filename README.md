@@ -44,6 +44,13 @@ Use a different port:
 - PowerShell: `$env:PORT=3000; docker compose up --build`
 - Bash: `PORT=3000 docker compose up --build`
 
+## SEO
+
+The Angular app is configured for SSR + prerender (SSG) so the static build includes real HTML + meta tags (better for Google and link previews).
+
+- Edit `angular-app/src/assets/resume.json` to control title/description and OpenGraph/Twitter tags.
+- Edit `angular-app/public/sitemap.xml` and `angular-app/public/robots.txt` with your real domain.
+
 ## More
 
 For Angular CLI tips and scaffolding commands, see `angular-app/README.md`.

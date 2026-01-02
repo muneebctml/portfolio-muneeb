@@ -28,6 +28,13 @@ Use a different port:
 - PowerShell: `$env:PORT=3000; docker compose up --build`
 - Bash: `PORT=3000 docker compose up --build`
 
+## SEO (Google friendly)
+
+This project is configured for SSR + prerender (SSG) so the generated `dist/app/browser/index.html` contains real page content and meta tags (better for crawlers and link previews).
+
+- Update `src/assets/resume.json` (especially `name`, `title`, `summary`, `website`, `photo`) to control `<title>`, description, OpenGraph/Twitter tags, canonical URL and share image.
+- Update `public/sitemap.xml` and `public/robots.txt` with your real domain before deploying.
+
 ## Update your resume
 
 Edit `src/assets/resume.json` with your real details. The site updates on reload.

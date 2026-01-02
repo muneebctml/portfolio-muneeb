@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { Title, Meta } from '@angular/platform-browser';
 import { animate, style, transition, trigger, query, stagger } from '@angular/animations';
 import { Resume } from '../models/resume';
@@ -305,16 +305,74 @@ export class HomeComponent {
   private resumeSvc = inject(ResumeService);
   private title = inject(Title);
   private meta = inject(Meta);
+  private document = inject(DOCUMENT);
   resume = signal<Resume | null>(null);
   year = new Date().getFullYear();
 
   constructor() {
     this.resumeSvc.getResume().subscribe(r => {
       this.resume.set(r);
-      if (r?.name) this.title.setTitle(`${r.name} - ${r.title || 'Portfolio'}`);
-      const desc = r?.summary || 'Portfolio';
-      this.meta.updateTag({ name: 'description', content: desc });
+      const title = r?.name ? `${r.name} | ${r.title || 'Portfolio'}` : 'Portfolio';
+      const description = r?.summary || 'Portfolio';
+
+      this.title.setTitle(title);
+      this.meta.updateTag({ name: 'description', content: description });
+
+      this.meta.updateTag({ property: 'og:type', content: 'website' });
+      this.meta.updateTag({ property: 'og:title', content: title });
+      this.meta.updateTag({ property: 'og:description', content: description });
+
+      this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+      this.meta.updateTag({ name: 'twitter:title', content: title });
+      this.meta.updateTag({ name: 'twitter:description', content: description });
+
+      const canonicalUrl = this.getCanonicalUrl(r);
+      if (canonicalUrl) {
+        this.setCanonicalLink(canonicalUrl);
+        this.meta.updateTag({ property: 'og:url', content: canonicalUrl });
+      }
+
+      const ogImage = this.getOgImageUrl(r);
+      if (ogImage) {
+        this.meta.updateTag({ property: 'og:image', content: ogImage });
+        this.meta.updateTag({ name: 'twitter:image', content: ogImage });
+      }
     });
+  }
+
+  private getCanonicalUrl(resume: Resume | null): string | null {
+    const website = resume?.website?.trim();
+    if (website) return website.endsWith('/') ? website : `${website}/`;
+
+    const href = this.document?.location?.href;
+    return href ? href.split('#')[0] : null;
+  }
+
+  private getOgImageUrl(resume: Resume | null): string | null {
+    const photo = resume?.photo?.trim();
+    if (!photo) return null;
+
+    const base = this.getCanonicalUrl(resume);
+    if (!base) return null;
+
+    try {
+      return new URL(photo, base).toString();
+    } catch {
+      return null;
+    }
+  }
+
+  private setCanonicalLink(url: string): void {
+    const head = this.document.head;
+    if (!head) return;
+
+    let link = head.querySelector(`link[rel="canonical"]`) as HTMLLinkElement | null;
+    if (!link) {
+      link = this.document.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      head.appendChild(link);
+    }
+    link.setAttribute('href', url);
   }
 }
 
