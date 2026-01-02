@@ -26,6 +26,8 @@ export class AnalyticsService {
     if (!isPlatformBrowser(this.platformId)) return;
     this.initialized = true;
 
+    if (location.pathname.startsWith('/admin')) return;
+
     this.visitorId = this.getOrCreateVisitorId();
     this.sessionId = this.uuid();
     this.sessionStartedAt = new Date().toISOString();
@@ -139,4 +141,3 @@ export class AnalyticsService {
     return globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(16).slice(2)}`;
   }
 }
-

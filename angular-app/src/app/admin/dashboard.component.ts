@@ -12,6 +12,7 @@ import { AdminAuthService } from './admin-auth.service';
       <header class="top">
         <h1>Dashboard</h1>
         <div class="actions">
+          <a routerLink="/admin/resume" class="link">Edit resume</a>
           <a routerLink="/" class="link">Back to site</a>
           <button (click)="logout()">Logout</button>
         </div>

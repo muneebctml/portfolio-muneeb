@@ -8,7 +8,8 @@ import bootstrap from './src/main.server';
 import { AnalyticsStore } from './src/server/analytics-store';
 import { issueAdminToken, requireAdminAuth, validateAdminCredentials } from './src/server/admin-auth';
 
-const analytics = new AnalyticsStore(process.env['ANALYTICS_DATA_DIR'] ?? resolve(process.cwd(), '.data'));
+const dataDir = process.env['ANALYTICS_DATA_DIR'] ?? resolve(process.cwd(), '.data');
+const analytics = new AnalyticsStore(dataDir);
 const analyticsReady = analytics.init();
 
 function getClientIp(req: Request): string | undefined {
@@ -18,9 +19,53 @@ function getClientIp(req: Request): string | undefined {
   return req.socket.remoteAddress || undefined;
 }
 
+function getResumePath(): string {
+  return join(dataDir, 'resume.json');
+}
+
+async function ensureResumeFile(browserDistFolder: string): Promise<void> {
+  const fs = await import('node:fs/promises');
+  await fs.mkdir(dataDir, { recursive: true });
+
+  const target = getResumePath();
+  try {
+    await fs.access(target);
+    return;
+  } catch {
+    // continue
+  }
+
+  try {
+    const fallback = join(browserDistFolder, 'assets', 'resume.json');
+    const raw = await fs.readFile(fallback, 'utf8');
+    await fs.writeFile(target, raw, 'utf8');
+  } catch {
+    // ignore; admin can still upload later
+  }
+}
+
+async function readResumeJson(browserDistFolder: string): Promise<unknown> {
+  const fs = await import('node:fs/promises');
+  try {
+    const raw = await fs.readFile(getResumePath(), 'utf8');
+    return JSON.parse(raw);
+  } catch {
+    const fallback = join(browserDistFolder, 'assets', 'resume.json');
+    const raw = await fs.readFile(fallback, 'utf8');
+    return JSON.parse(raw);
+  }
+}
+
+async function writeResumeJson(value: unknown): Promise<void> {
+  const fs = await import('node:fs/promises');
+  await fs.mkdir(dataDir, { recursive: true });
+  await fs.writeFile(getResumePath(), JSON.stringify(value, null, 2), 'utf8');
+}
+
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
+  server.set('trust proxy', true);
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
   const browserDistFolder = resolve(serverDistFolder, '../browser');
   const indexHtml = join(serverDistFolder, 'index.server.html');
@@ -57,6 +102,29 @@ export function app(): express.Express {
 
   api.get('/admin/summary', requireAdminAuth, (_req, res) => {
     res.json(analytics.getSummary());
+  });
+
+  api.get('/admin/resume', requireAdminAuth, async (_req, res) => {
+    try {
+      res.json(await readResumeJson(browserDistFolder));
+    } catch {
+      res.status(500).json({ error: 'Failed to read resume' });
+    }
+  });
+
+  api.put('/admin/resume', requireAdminAuth, async (req, res) => {
+    const body = req.body;
+    if (!body || typeof body !== 'object') {
+      res.status(400).json({ error: 'Invalid JSON body' });
+      return;
+    }
+
+    try {
+      await writeResumeJson(body);
+      res.json({ ok: true });
+    } catch {
+      res.status(500).json({ error: 'Failed to write resume' });
+    }
   });
 
   api.post('/track/session/start', (req, res) => {
@@ -127,11 +195,21 @@ export function app(): express.Express {
 
   server.use('/api', api);
 
+  server.get('/assets/resume.json', async (_req, res) => {
+    res.setHeader('Content-Type', 'application/json; charset=utf-8');
+    res.setHeader('Cache-Control', 'no-cache');
+    try {
+      res.json(await readResumeJson(browserDistFolder));
+    } catch {
+      res.status(404).json({ error: 'Not found' });
+    }
+  });
+
   // Serve static files from /browser
   server.use(express.static(browserDistFolder, { maxAge: '1y', index: false }));
 
   // All regular routes use the Angular engine
-  server.get('**', (req, res, next) => {
+  server.get('**', async (req, res, next) => {
     const { protocol, originalUrl, baseUrl, headers } = req;
 
     commonEngine
@@ -151,6 +229,7 @@ export function app(): express.Express {
 
 async function run(): Promise<void> {
   await analyticsReady;
+  await ensureResumeFile(resolve(dirname(fileURLToPath(import.meta.url)), '../browser'));
   const port = process.env['PORT'] || 4000;
 
   // Start up the Node server

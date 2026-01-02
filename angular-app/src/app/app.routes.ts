@@ -14,6 +14,11 @@ export const routes: Routes = [
         canActivate: [adminGuard],
         loadComponent: () => import('./admin/dashboard.component').then((m) => m.DashboardComponent),
       },
+      {
+        path: 'resume',
+        canActivate: [adminGuard],
+        loadComponent: () => import('./admin/resume-editor.component').then((m) => m.ResumeEditorComponent),
+      },
     ],
   },
   { path: '**', redirectTo: '' }

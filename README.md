@@ -48,6 +48,7 @@ Use a different port:
 
 - Login: `http://localhost:9999/admin/login`
 - Dashboard: `http://localhost:9999/admin/dashboard`
+- Resume editor: `http://localhost:9999/admin/resume`
 
 Credentials are controlled via env vars in `docker-compose.yml` (`ADMIN_USERNAME`, `ADMIN_PASSWORD`, `JWT_SECRET`).
 

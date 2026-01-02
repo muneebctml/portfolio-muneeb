@@ -41,4 +41,16 @@ export class AdminApiService {
     const headers = token ? new HttpHeaders({ Authorization: `Bearer ${token}` }) : undefined;
     return this.http.get<AdminSummary>('/api/admin/summary', { headers });
   }
+
+  getResume() {
+    const token = this.auth.getToken();
+    const headers = token ? new HttpHeaders({ Authorization: `Bearer ${token}` }) : undefined;
+    return this.http.get<unknown>('/api/admin/resume', { headers });
+  }
+
+  updateResume(value: unknown) {
+    const token = this.auth.getToken();
+    const headers = token ? new HttpHeaders({ Authorization: `Bearer ${token}` }) : undefined;
+    return this.http.put<{ ok: true }>('/api/admin/resume', value, { headers });
+  }
 }

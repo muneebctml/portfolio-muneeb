@@ -34,6 +34,7 @@ Tracks visitors/sessions/page time and exposes an admin UI:
 
 - Login: `http://localhost:9999/admin/login`
 - Dashboard: `http://localhost:9999/admin/dashboard`
+- Resume editor: `http://localhost:9999/admin/resume` (updates live without rebuild)
 
 Defaults are set in `docker-compose.yml` (change for real deployments):
 
