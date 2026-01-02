@@ -1,186 +1,192 @@
 {
   "name": "Muneeb Ur Rehman",
-  "title": "Full Stack Developer | .NET | Angular | SQL",
-  "location": "",
+  "title": "Senior Full-Stack Engineer | .NET & Angular | Enterprise & Platform Systems",
+  "location": "Remote",
   "photo": "assets/Profile-Muneeb.jpeg",
   "email": "muneebur047@gmail.com",
   "phone": "+92 300 601 7047",
-  "website": "http://muneebtech.net/",
+  "website": "https://muneebtech.net/",
   "linkedin": "https://www.linkedin.com/in/muneebur047/",
   "github": "https://github.com/muneebctml",
-  "summary": "Full Stack Developer with 6+ years of experience building scalable ERP systems, APIs, and enterprise web applications using .NET, Azure, and modern front-end frameworks (React, Angular). Specialized in Microsoft Dynamics GP customization, SQL performance optimization, and CI/CD automation. Proven leader in mentoring teams, driving digital transformation, and delivering secure, high-performance solutions for global clients.",
-  "skills": ["C#, .NET (Core, MVC, Web API), ASP.NET, Entity Framework Core", "JavaScript, TypeScript, Angular, React", "SQL Server, T-SQL, Database Design", "Azure DevOps, CI/CD Pipelines", "HTML5, CSS3, SCSS, Bootstrap", "RESTful APIs, Microservices Architecture", "Agile Methodologies, Scrum"],
-  "tools": ["Git", "Docker", "Postman", "Visual Studio", "Azure DevOps", "SQL Server Management Studio"],
+
+  "summary": "Senior Full-Stack Engineer with 6+ years of experience designing and delivering complex, data-intensive enterprise systems. I specialize in backend-heavy development using .NET, Angular, SQL, and cloud platforms, with a strong focus on data correctness, security, auditability, and scalability. My experience spans ERP platforms, healthcare billing systems, payroll, POS, and internal business applications. I regularly own features end-to-end — from architecture and implementation to deployment and production support — and have collaborated remotely with international teams on long-lived, business-critical systems.",
+
+  "skills": [
+    "C# / .NET (ASP.NET Core, Web API)",
+    "Angular & TypeScript",
+    "SQL & Relational Data Modeling",
+    "Software Architecture (Clean Architecture, DDD, CQRS)",
+    "Secure APIs & Authentication (JWT, RBAC)",
+    "Cloud-Native Development & CI/CD"
+  ],
+
+  "tools": [
+    "Git",
+    "Docker",
+    "GitLab CI/CD",
+    "Azure DevOps",
+    "Postman",
+    "Visual Studio",
+    "SQL Server Management Studio"
+  ],
+
   "experience": [
-  {
-    "company": "Tuli",
-    "role": "Senior Software Engineer",
-    "start": "Jul 2024",
-    "end": "Present",
-    "location": "Remote",
-    "highlights": [
-      "End-to-end ERP system development with .NET 9 and React.",
-      "Built CI/CD pipelines with GitLab and Docker, streamlining deployments.",
-      "Optimized PostgreSQL & ClickHouse for improved reporting and reduced costs."
-    ],
-    "technologies": ["React", ".NET 9", "PostgreSQL", "ClickHouse", "Docker", "GitLab CI/CD", "Hangfire"]
-  },
-  {
-    "company": "Integriti Pvt Ltd",
-    "role": "Software Engineer",
-    "start": "Oct 2023",
-    "end": "Jul 2024",
-    "location": "Lahore, Pakistan",
-    "highlights": [
-      "Developed HIPAA-compliant healthcare platform using .NET 7 & Azure SQL.",
-      "Automated invoicing, PDF generation, and email notifications.",
-      "Enhanced Razor Pages UI with jQuery for better client experience."
-    ],
-    "technologies": [".NET 7", "Azure SQL", "Razor Pages", "jQuery", "JavaScript"]
-  },
-  {
-    "company": "Technomics",
-    "role": "Software Engineer",
-    "start": "Dec 2022",
-    "end": "Mar 2024",
-    "location": "Lahore, Pakistan",
-    "highlights": [
-      "Architected enterprise applications with ASP.NET MVC & .NET 7.",
-      "Implemented Identity Server for secure authentication & authorization.",
-      "Designed Azure-based services for real-time data processing."
-    ],
-    "technologies": [".NET 7", "ASP.NET MVC", "Identity Server", "Azure", "REST APIs", "Angular", "CI/CD"]
-  },
-  {
-    "company": "Colony Textile Mills",
-    "role": "Technical Lead",
-    "start": "Jul 2019",
-    "end": "Dec 2022",
-    "location": "Multan, Pakistan",
-    "highlights": [
-      "Customized Microsoft Dynamics GP ERP, boosting finance operations.",
-      "Integrated biometric and face scanning systems for 5,000+ employees.",
-      "Directed in-house HRM & POS app development, cutting vendor costs."
-    ],
-    "technologies": ["Microsoft Dynamics GP", "Dexterity", "SSRS", "Crystal Reports", ".NET", "Angular", "SQL Server"]
-  },
-  {
-    "company": "Desire Studio",
-    "role": "Unity Game Developer",
-    "start": "Jan 2018",
-    "end": "Jun 2019",
-    "location": "Lahore, Pakistan",
-    "highlights": [
-      "Developed and published Android games on Google Play Store.",
-      "Designed immersive environments and wrote efficient C# game scripts.",
-      "Built responsive UI/UX for mobile gameplay."
-    ],
-    "technologies": ["Unity3D", "C#", "Android", "Game Development"]
-  }
-],
-"projects": [
-  {
-    "name": "ERP System for Textile Industry",
-    "description": "An enterprise ERP platform developed to streamline finance, HR, and operations for a textile company.",
-    "url": "",
-    "repo": "",
-    "highlights": [
-      "Customized Microsoft Dynamics GP ERP with in-house modules.",
-      "Integrated biometric devices for attendance tracking of 5,000+ employees.",
-      "Improved financial reporting speed by 30% with optimized SQL queries."
-    ],
-    "technologies": [".NET", "Microsoft Dynamics GP", "SQL Server", "SSRS", "Angular"]
-  },
-  {
-    "name": "Healthcare Compliance Platform",
-    "description": "A HIPAA-compliant web application enabling secure patient data management, billing, and reporting.",
-    "url": "",
-    "repo": "",
-    "highlights": [
-      "Developed core backend using .NET 7 and Azure SQL.",
-      "Automated invoicing, PDF reports, and email notifications.",
-      "Enhanced usability with interactive Razor Pages and jQuery."
-    ],
-    "technologies": [".NET 7", "Azure SQL", "Razor Pages", "jQuery"]
-  },
-  {
-    "name": "Cloud-Based ERP Reporting System",
-    "description": "A reporting solution for ERP systems designed to handle large-scale financial and operational datasets.",
-    "url": "",
-    "repo": "",
-    "highlights": [
-      "Optimized PostgreSQL & ClickHouse queries, reducing data processing costs by 25%.",
-      "Implemented CI/CD pipelines with GitLab and Docker.",
-      "Delivered real-time dashboards for executives and stakeholders."
-    ],
-    "technologies": [".NET 9", "React", "PostgreSQL", "ClickHouse", "Docker", "GitLab CI/CD"]
-  },
-  {
-    "name": "Human Resource Management System (HRMS)",
-    "description": "A complete HRM system built from the ground up, covering the entire employee lifecycle from joining to resignation.",
-    "url": "http://69.197.152.150:9809/",
-    "repo": "",
-    "highlights": [
-      "Designed and developed modules for payroll, salary-on-roll, leave management, and clearance workflows.",
-      "Implemented user-based access rights for secure role management.",
-      "Integrated with biometric devices (fingerprint, barcode) for attendance tracking.",
-      "Connected with ERP for seamless financial and operational reporting.",
-      "Automated reporting with SSRS for HR and finance departments."
-    ],
-    "technologies": [".NET", "Razor Pages", "AngularJS", "MSSQL", "SSRS", "jQuery", "Biometric SDKs", "ERP Integration"]
-  },
-  {
-    "name": "Loom Management System",
-    "description": "A web-based control and monitoring panel for weaving machines, providing detailed production tracking, reporting, and efficiency analytics.",
-    "url": "http://69.197.152.150:9810/",
-    "repo": "",
-    "highlights": [
-      "Developed panel to monitor loom status and machine performance in real time.",
-      "Enabled supervisors to control weaving functions and track downtime.",
-      "Built reporting dashboards to measure production efficiency and output trends.",
-      "Integrated with ERP for unified textile production management."
-    ],
-    "technologies": [".NET", "Razor Pages", "AngularJS", "MSSQL", "SSRS", "jQuery", "ERP Integration"]
-  },
-  {
-    "name": "Android Games (Unity3D)",
-    "description": "Multiple mobile games developed and published on Google Play Store.",
-    "url": "",
-    "repo": "",
-    "highlights": [
-      "Designed immersive gameplay and responsive UI/UX.",
-      "Published Android titles gaining thousands of downloads.",
-      "Implemented efficient C# game scripts for smooth performance."
-    ],
-    "technologies": ["Unity3D", "C#", "Android", "Game Development"]
-  },
-  {
-    "name": "Portfolio Website",
-    "description": "A personal portfolio website showcasing projects, skills, and experience.",
-    "url": "https://muneebtech.net/",
-    "repo": "https://github.com/muneebctml/portfolio-muneeb",
-    "highlights": [
-      "Developed a responsive and modern portfolio website using Angular.",
-      "Showcased projects, skills, and professional experience effectively.",
-      "Implemented SEO best practices to enhance online visibility."
-    ],
-    "technologies": ["Angular", "TypeScript", "HTML5", "CSS3", "Bootstrap"]
-  }
-],
+    {
+      "company": "TULI",
+      "role": "Senior Software Engineer",
+      "start": "Jul 2024",
+      "end": "Present",
+      "location": "Remote",
+      "highlights": [
+        "Designing and delivering enterprise ERP and financial reporting modules using .NET 9 and modern frontend frameworks.",
+        "Owning backend-heavy features end-to-end, including architecture decisions, implementation, and production support.",
+        "Implemented a runtime-configurable modular architecture supporting multi-environment deployments.",
+        "Built a custom domain-specific language (DSL) using ANTLR and Roslyn to automate workflows and role-based access control.",
+        "Developed and optimized high-volume reporting and analytics pipelines for financial and operational use cases.",
+        "Automated build and deployment workflows using Docker and GitLab CI/CD, improving release reliability and speed."
+      ],
+      "technologies": [
+        ".NET 9",
+        "PostgreSQL",
+        "ClickHouse",
+        "Docker",
+        "GitLab CI/CD",
+        "ANTLR",
+        "Roslyn"
+      ]
+    },
+    {
+      "company": "Integriti Pvt Ltd",
+      "role": "Software Engineer",
+      "start": "Oct 2023",
+      "end": "Jul 2024",
+      "location": "Lahore, Pakistan",
+      "highlights": [
+        "Replatformed a legacy healthcare system from Java to .NET 7 using Razor Pages and SQL Server.",
+        "Delivered core modules including Claims, Accounts Receivable/Payable, and Patient Management.",
+        "Improved SQL performance and UI responsiveness for data-intensive workflows.",
+        "Collaborated remotely with U.S.-based stakeholders on delivery and compliance requirements."
+      ],
+      "technologies": [
+        ".NET 7",
+        "Razor Pages",
+        "SQL Server",
+        "jQuery",
+        "AWS WorkSpaces"
+      ]
+    },
+    {
+      "company": "Technomics",
+      "role": "Software Engineer",
+      "start": "Dec 2022",
+      "end": "Mar 2024",
+      "location": "Lahore, Pakistan",
+      "highlights": [
+        "Developed an Azure-hosted healthcare reimbursement and billing platform using ASP.NET and Azure SQL.",
+        "Integrated Power BI dashboards, RDLC reporting, and Azure Functions for automated file processing.",
+        "Implemented role-based access control, encryption, and secure data handling for compliance-focused systems."
+      ],
+      "technologies": [
+        "ASP.NET",
+        "Azure SQL",
+        "Power BI",
+        "Azure Functions",
+        "RDLC"
+      ]
+    },
+    {
+      "company": "Colony Textile Mills Limited",
+      "role": "Technical Lead",
+      "start": "Jul 2019",
+      "end": "Dec 2022",
+      "location": "Multan, Pakistan",
+      "highlights": [
+        "Led the design and development of a multi-tenant HRMS and payroll platform supporting business-critical operations.",
+        "Implemented complex payroll rules and approval workflows using CQRS and DDD patterns.",
+        "Built JWT-secured APIs with fine-grained, field-level authorization.",
+        "Integrated biometric and face-recognition devices to automate attendance tracking.",
+        "Introduced structured logging and observability using Serilog and Seq, and reduced external vendor dependency."
+      ],
+      "technologies": [
+        ".NET",
+        "SQL Server",
+        "CQRS",
+        "DDD",
+        "JWT",
+        "Serilog",
+        "Biometric SDKs"
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "Expense Manager — Full-Stack Financial Application",
+      "description": "A full-stack financial application focused on secure data handling and clean architecture.",
+      "url": "",
+      "repo": "",
+      "highlights": [
+        "Designed and built a .NET 9 Web API with JWT-based authentication and user-level data isolation.",
+        "Applied Clean Architecture to separate domain, application, and infrastructure layers.",
+        "Designed an audit-friendly relational data model to ensure correctness of financial records.",
+        "Built a cross-platform client using .NET MAUI (Android, iOS, Windows, macOS).",
+        "Owned the system end-to-end from architecture to implementation."
+      ],
+      "technologies": [
+        ".NET 9",
+        "ASP.NET Core",
+        "SQL Server",
+        ".NET MAUI",
+        "JWT"
+      ]
+    },
+    {
+      "name": "HRMS & Payroll Platform — Enterprise System",
+      "description": "A multi-tenant HRMS and payroll platform supporting attendance, payroll processing, and employee lifecycle management.",
+      "url": "",
+      "repo": "",
+      "highlights": [
+        "Implemented complex payroll rules, deductions, and approval workflows using CQRS and DDD.",
+        "Built JWT-secured APIs with fine-grained, field-level access control.",
+        "Integrated biometric and face-recognition devices to automate attendance.",
+        "Ensured high data accuracy for business-critical payroll operations."
+      ],
+      "technologies": [
+        ".NET",
+        "SQL Server",
+        "CQRS",
+        "DDD",
+        "JWT",
+        "Biometric SDKs"
+      ]
+    },
+    {
+      "name": "Enterprise ERP & Reporting Platform",
+      "description": "A modular ERP and reporting platform designed to handle financial and operational data at scale.",
+      "url": "",
+      "repo": "",
+      "highlights": [
+        "Designed backend-heavy ERP and reporting modules with a focus on data integrity and maintainability.",
+        "Optimized PostgreSQL and ClickHouse queries for high-volume analytics and reporting.",
+        "Implemented CI/CD pipelines and containerized deployments for reliable releases."
+      ],
+      "technologies": [
+        ".NET 9",
+        "PostgreSQL",
+        "ClickHouse",
+        "Docker",
+        "GitLab CI/CD"
+      ]
+    }
+  ],
+
   "education": [
-  {
-    "institution": "Bahauddin Zakariya University - BZU",
-    "degree": "BS Computer Science",
-    "start": "2014",
-    "end": "2019",
-    "location": "Multan, Pakistan",
-    "highlights": [
-      "Completed coursework in software engineering, database systems, and distributed computing.",
-      "Graduated with strong focus on .NET development, web technologies, and cloud computing.",
-      "Led multiple academic projects including an ERP module and mobile applications.",
-      "Actively participated in coding competitions and university hackathons.",
-      "Developed a final year project integrating .NET, SQL Server, and cloud services."
-    ]
-  }
-]
+    {
+      "institution": "Bahauddin Zakariya University (BZU)",
+      "degree": "BS Computer Science",
+      "start": "2014",
+      "end": "2019",
+      "location": "Multan, Pakistan"
+    }
+  ]
 }

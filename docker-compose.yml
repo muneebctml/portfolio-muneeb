@@ -1,0 +1,9 @@
+services:
+  angular-portfolio:
+    build:
+      context: ./angular-app
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+

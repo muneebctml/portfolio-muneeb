@@ -4,7 +4,7 @@ Personal portfolio generated with Angular 18 (standalone components).
 
 ## Run locally
 
-1. `cd app`
+1. `cd angular-app`
 2. `npm start` or `npm run start`
 3. Open `http://localhost:4200` in your browser
 
@@ -15,6 +15,13 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 `npm run build` produces artifacts in `dist/`.
+
+## Run with Docker (production build)
+
+From the repo root:
+
+1. `docker compose up --build`
+2. Open `http://localhost:8080`
 
 ## Update your resume
 
