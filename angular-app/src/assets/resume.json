@@ -19,7 +19,7 @@
       "file": "assets/Muneeb-Ur-Rehman-FullStack-Resume.pdf"
     }
   ],
-  "summary": "Senior .NET engineer with 6+ years building data-heavy ERP, finance, payroll and U.S. healthcare systems. I design and ship ASP.NET Core APIs, PostgreSQL and SQL Server data models, background jobs and Angular or React front ends where correctness and auditability matter, and I own the work from domain modeling through deployment and production support. I currently lead a team of five developers. I also build and ship my own products: Nivora, a live expense-splitting app for web and Android, and Arqentivo POS, a retail POS and storefront (Fonaza frontend on a .NET engine).",
+  "summary": "Senior .NET engineer with 6+ years building data-heavy ERP, finance, payroll and U.S. healthcare systems. I design and ship ASP.NET Core APIs, PostgreSQL and SQL Server data models, background jobs and Angular or React front ends where correctness and auditability matter, and I own the work from domain modeling through deployment and production support. I currently lead a team of five developers. I also build and ship my own products: Nivora, a live expense-splitting app for web and Android, and Arqentivo, a self-hosted POS and online-store platform on .NET 10, Angular and PostgreSQL.",
   "services": [
     {
       "name": "Backend APIs & services",
@@ -207,21 +207,38 @@
       ]
     },
     {
-      "name": "Arqentivo POS",
+      "name": "Arqentivo: POS & online store platform",
       "status": "Live demo",
-      "description": "Retail point-of-sale, back office and customer storefront sold as one product. Fonaza is the TypeScript frontend; the Mini Agro POS engine is the .NET backend.",
-      "technologies": [
-        ".NET 10",
-        "TypeScript",
-        "PostgreSQL",
-        "MinIO",
-        "Docker"
-      ],
+      "description": "Self-hosted retail platform that puts POS, back office and online store in one product, so a shop needs neither Shopify nor WordPress. One .NET 10 engine serves the Angular POS, admin and storefront apps.",
       "url": "https://arqentivo-demo-pos.muneebtech.net/",
       "highlights": [
-        "Fonaza frontend: POS checkout, administration screens and the online storefront.",
-        "Mini Agro POS engine: .NET 10 APIs over PostgreSQL with MinIO file storage.",
-        "Each customer runs on its own isolated Docker stack."
+        "Multi-company, multi-store tenancy with row-level isolation, JWT and refresh tokens, and role-based permissions.",
+        "Inventory with per-product batch and expiry tracking (FIFO / FEFO), purchasing, customer credit ledgers, COD and courier hand-off.",
+        "Online store with CMS, SEO center, coupons, variants and reviews, plus a storefront SDK and ZIP publishing (preview, publish, rollback) for merchant-built sites.",
+        "One isolated Docker stack per shop on PostgreSQL and S3 object storage; about 2,300 automated tests, including PostgreSQL integration tests in CI."
+      ],
+      "technologies": [
+        ".NET 10 minimal APIs",
+        "EF Core",
+        "PostgreSQL",
+        "Angular",
+        "Docker",
+        "xUnit + Testcontainers"
+      ]
+    },
+    {
+      "name": "Fonaza: custom storefront on Arqentivo",
+      "status": "Pilot",
+      "description": "Storefront for a phone-accessories shop, built as an Arqentivo custom site that talks to the shop only through the storefront SDK.",
+      "highlights": [
+        "Browser cart with server-calculated totals, guest order tokens and SDK-managed customer sign-in.",
+        "Design tokens for type, color and spacing; packaged as a ZIP that the shop uploads and publishes."
+      ],
+      "technologies": [
+        "React 19",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS"
       ]
     },
     {
