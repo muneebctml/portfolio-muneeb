@@ -19,7 +19,7 @@
       "file": "assets/Muneeb-Ur-Rehman-FullStack-Resume.pdf"
     }
   ],
-  "summary": "Senior .NET engineer with 6+ years building data-heavy ERP, finance, payroll and U.S. healthcare systems. I design and ship ASP.NET Core APIs, PostgreSQL and SQL Server data models, background jobs and Angular or React front ends where correctness and auditability matter, and I own the work from domain modeling through deployment and production support. I currently lead a team of five developers. I also build and ship my own products: Nivora, a live expense-splitting app for web and Android, and Arqentivo POS, a retail POS and storefront.",
+  "summary": "Senior .NET engineer with 6+ years building data-heavy ERP, finance, payroll and U.S. healthcare systems. I design and ship ASP.NET Core APIs, PostgreSQL and SQL Server data models, background jobs and Angular or React front ends where correctness and auditability matter, and I own the work from domain modeling through deployment and production support. I currently lead a team of five developers. I also build and ship my own products: Nivora, a live expense-splitting app for web and Android, and Arqentivo POS, a retail POS and storefront (Fonaza frontend on a .NET engine).",
   "services": [
     {
       "name": "Backend APIs & services",
@@ -209,18 +209,19 @@
     {
       "name": "Arqentivo POS",
       "status": "Live demo",
-      "description": "Retail point-of-sale, back office and customer storefront in one product, deployed as an isolated Docker stack per customer.",
+      "description": "Retail point-of-sale, back office and customer storefront sold as one product. Fonaza is the TypeScript frontend; the Mini Agro POS engine is the .NET backend.",
       "technologies": [
         ".NET 10",
-        "Angular",
+        "TypeScript",
         "PostgreSQL",
         "MinIO",
         "Docker"
       ],
       "url": "https://arqentivo-demo-pos.muneebtech.net/",
       "highlights": [
-        "POS checkout, inventory and administration with an online storefront on the same data.",
-        "Per-customer Docker deployments with PostgreSQL and MinIO file storage."
+        "Fonaza frontend: POS checkout, administration screens and the online storefront.",
+        "Mini Agro POS engine: .NET 10 APIs over PostgreSQL with MinIO file storage.",
+        "Each customer runs on its own isolated Docker stack."
       ]
     },
     {
