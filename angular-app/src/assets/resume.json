@@ -10,10 +10,16 @@
   "linkedin": "https://www.linkedin.com/in/muneebur047/",
   "github": "https://github.com/muneebctml",
   "resumes": [
-    { "label": "Backend CV", "file": "assets/Muneeb-Ur-Rehman-Backend-Resume.pdf" },
-    { "label": "Full-Stack CV", "file": "assets/Muneeb-Ur-Rehman-FullStack-Resume.pdf" }
+    {
+      "label": "Backend CV",
+      "file": "assets/Muneeb-Ur-Rehman-Backend-Resume.pdf"
+    },
+    {
+      "label": "Full-Stack CV",
+      "file": "assets/Muneeb-Ur-Rehman-FullStack-Resume.pdf"
+    }
   ],
-  "summary": "Senior .NET engineer with 6+ years building data-heavy ERP, finance, payroll and U.S. healthcare systems. I design and ship ASP.NET Core APIs, PostgreSQL and SQL Server data models, background jobs and Angular or React front ends where correctness and auditability matter, and I own the work from domain modeling through deployment and production support. I currently lead a team of five developers.",
+  "summary": "Senior .NET engineer with 6+ years building data-heavy ERP, finance, payroll and U.S. healthcare systems. I design and ship ASP.NET Core APIs, PostgreSQL and SQL Server data models, background jobs and Angular or React front ends where correctness and auditability matter, and I own the work from domain modeling through deployment and production support. I currently lead a team of five developers. I also build and ship my own products: Nivora, a live expense-splitting app for web and Android, and Arqentivo POS, a retail POS and storefront (Fonaza frontend on a .NET engine).",
   "services": [
     {
       "name": "Backend APIs & services",
@@ -33,12 +39,73 @@
     }
   ],
   "skillGroups": [
-    { "name": "Backend", "items": ["C#", "ASP.NET Core (.NET 8/9/10)", "REST APIs", "EF Core", "JWT / RBAC", "Hangfire", "Redis"] },
-    { "name": "Data", "items": ["PostgreSQL", "SQL Server / T-SQL", "ClickHouse", "Azure SQL", "Query tuning", "Bulk data pipelines"] },
-    { "name": "Frontend", "items": ["Angular", "TypeScript", "React", "JavaScript", "Razor Pages"] },
-    { "name": "Architecture", "items": ["Modular monolith", "Clean Architecture", "DDD", "CQRS", "Multi-tenancy", "Audit trails"] },
-    { "name": "Delivery", "items": ["Docker", "GitLab CI/CD", "Azure DevOps", "Azure Functions", "Linux", "IIS", "Nginx", "Serilog / Seq"] },
-    { "name": "Domains", "items": ["ERP & accounting", "Financial reporting", "Payroll & HRMS", "U.S. healthcare claims", "Industrial analytics"] }
+    {
+      "name": "Backend",
+      "items": [
+        "C#",
+        "ASP.NET Core (.NET 8/9/10)",
+        "REST APIs",
+        "EF Core",
+        "JWT / RBAC",
+        "Hangfire",
+        "Redis"
+      ]
+    },
+    {
+      "name": "Data",
+      "items": [
+        "PostgreSQL",
+        "SQL Server / T-SQL",
+        "ClickHouse",
+        "Azure SQL",
+        "Query tuning",
+        "Bulk data pipelines"
+      ]
+    },
+    {
+      "name": "Frontend",
+      "items": [
+        "Angular",
+        "TypeScript",
+        "React",
+        "JavaScript",
+        "Razor Pages"
+      ]
+    },
+    {
+      "name": "Architecture",
+      "items": [
+        "Modular monolith",
+        "Clean Architecture",
+        "DDD",
+        "CQRS",
+        "Multi-tenancy",
+        "Audit trails"
+      ]
+    },
+    {
+      "name": "Delivery",
+      "items": [
+        "Docker",
+        "GitLab CI/CD",
+        "Azure DevOps",
+        "Azure Functions",
+        "Linux",
+        "IIS",
+        "Nginx",
+        "Serilog / Seq"
+      ]
+    },
+    {
+      "name": "Domains",
+      "items": [
+        "ERP & accounting",
+        "Financial reporting",
+        "Payroll & HRMS",
+        "U.S. healthcare claims",
+        "Industrial analytics"
+      ]
+    }
   ],
   "experience": [
     {
@@ -53,7 +120,16 @@
         "Built accounting journal services, reporting queries and dashboards, plus financial and operational integrity checks.",
         "Shipped targeted React UI changes and took part in architecture discussions, code reviews and production troubleshooting."
       ],
-      "technologies": [".NET 9", "PostgreSQL", "ClickHouse", "Redis", "Hangfire", "React", "Docker", "GitLab CI/CD"]
+      "technologies": [
+        ".NET 9",
+        "PostgreSQL",
+        "ClickHouse",
+        "Redis",
+        "Hangfire",
+        "React",
+        "Docker",
+        "GitLab CI/CD"
+      ]
     },
     {
       "company": "Integriti Pvt Ltd",
@@ -66,7 +142,13 @@
         "Tuned SQL queries and automated invoicing, PDF generation and email notifications.",
         "Worked directly with U.S. stakeholders on HIPAA-sensitive features with role-based access and secure data handling."
       ],
-      "technologies": [".NET 7", "Razor Pages", "SQL Server", "Azure SQL", "jQuery"]
+      "technologies": [
+        ".NET 7",
+        "Razor Pages",
+        "SQL Server",
+        "Azure SQL",
+        "jQuery"
+      ]
     },
     {
       "company": "Technomics",
@@ -78,7 +160,13 @@
         "Developed healthcare payment and reimbursement workflows on ASP.NET and Azure SQL.",
         "Implemented Azure Functions-based background processing, Power BI / RDLC reporting and role-based authorization."
       ],
-      "technologies": ["ASP.NET", "Azure SQL", "Azure Functions", "Power BI", "RDLC"]
+      "technologies": [
+        "ASP.NET",
+        "Azure SQL",
+        "Azure Functions",
+        "Power BI",
+        "RDLC"
+      ]
     },
     {
       "company": "Colony Textile Mills Limited",
@@ -91,10 +179,51 @@
         "Integrated Microsoft Dynamics GP finance processes with in-house systems through secure APIs and SQL Server reporting.",
         "Connected biometric attendance devices and kept legacy Visual FoxPro / VB systems integrated with newer .NET services."
       ],
-      "technologies": [".NET", "SQL Server", "Microsoft Dynamics GP", "SSRS", "Angular"]
+      "technologies": [
+        ".NET",
+        "SQL Server",
+        "Microsoft Dynamics GP",
+        "SSRS",
+        "Angular"
+      ]
     }
   ],
   "projects": [
+    {
+      "name": "Nivora",
+      "status": "Live product",
+      "description": "Expense-splitting and personal finance app for friends, roommates, families and small businesses. Web and Android, free to start.",
+      "technologies": [
+        ".NET",
+        "Angular",
+        "Flutter (Android)",
+        "PostgreSQL"
+      ],
+      "url": "https://nivora-app.net/",
+      "highlights": [
+        "Equal or custom bill splits, people ledgers with pay/receive, and separate books for personal and business money.",
+        "Recurring bills with reminders, transfers, account and cash tracking, notes and a Kanban planner.",
+        "Receipt attachments with OCR; one .NET API serving the Angular web app and the Flutter Android app."
+      ]
+    },
+    {
+      "name": "Arqentivo POS",
+      "status": "Live demo",
+      "description": "Retail point-of-sale, back office and customer storefront sold as one product. Fonaza is the TypeScript frontend; the Mini Agro POS engine is the .NET backend.",
+      "technologies": [
+        ".NET 10",
+        "TypeScript",
+        "PostgreSQL",
+        "MinIO",
+        "Docker"
+      ],
+      "url": "https://arqentivo-demo-pos.muneebtech.net/",
+      "highlights": [
+        "Fonaza frontend: POS checkout, administration screens and the online storefront.",
+        "Mini Agro POS engine: .NET 10 APIs over PostgreSQL with MinIO file storage.",
+        "Each customer runs on its own isolated Docker stack."
+      ]
+    },
     {
       "name": "Colony HR: payroll modernization",
       "status": "In UAT",
@@ -104,7 +233,15 @@
         "Attendance, leave, overtime, loans and payroll logic with audit history and payroll integrity controls.",
         "Running in internal UAT; historical migration and production cutover are next."
       ],
-      "technologies": [".NET 10", "Angular", "PostgreSQL", "EF Core", "Hangfire", "MinIO", "Docker"]
+      "technologies": [
+        ".NET 10",
+        "Angular",
+        "PostgreSQL",
+        "EF Core",
+        "Hangfire",
+        "MinIO",
+        "Docker"
+      ]
     },
     {
       "name": "Colossys: industrial data sync",
@@ -115,7 +252,14 @@
         "Configurable batching, PostgreSQL binary COPY, staging tables, transactional upserts and SQL Server bulk operations.",
         "Cut unnecessary logging and database overhead; built reporting and analytics features."
       ],
-      "technologies": [".NET", "PostgreSQL", "SQL Server", "Angular", "Hangfire", "Docker"]
+      "technologies": [
+        ".NET",
+        "PostgreSQL",
+        "SQL Server",
+        "Angular",
+        "Hangfire",
+        "Docker"
+      ]
     },
     {
       "name": "Tuli: declarative ERP reporting",
@@ -125,25 +269,25 @@
         "Owned the .report capability for financial and operational reporting.",
         "Accounting journals, dashboards, query optimization and data-integrity checks."
       ],
-      "technologies": [".NET 9", "PostgreSQL / JSONB", "ClickHouse", "ANTLR", "Roslyn", "React"]
+      "technologies": [
+        ".NET 9",
+        "PostgreSQL / JSONB",
+        "ClickHouse",
+        "ANTLR",
+        "Roslyn",
+        "React"
+      ]
     },
     {
       "name": "DbSync",
       "status": "Tooling",
       "description": ".NET CLI for SQL Server and PostgreSQL schema discovery, diff-based migrations and configurable full or append synchronization.",
-      "technologies": [".NET 10", "SQL Server", "PostgreSQL", "CLI"]
-    },
-    {
-      "name": "Mini Agro POS",
-      "status": "Product",
-      "description": "Retail POS, administration and storefront with an isolated Docker deployment per customer.",
-      "technologies": [".NET 10", "Angular", "PostgreSQL", "MinIO", "Docker"]
-    },
-    {
-      "name": "Nivora",
-      "status": "In development",
-      "description": "Personal finance product with a .NET API, Angular web app and Flutter Android client, including offline and online data handling.",
-      "technologies": [".NET", "Angular", "Flutter", "PostgreSQL"]
+      "technologies": [
+        ".NET 10",
+        "SQL Server",
+        "PostgreSQL",
+        "CLI"
+      ]
     }
   ],
   "education": [
