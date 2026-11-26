@@ -27,7 +27,7 @@ import { ResumeService } from '../services/resume.service';
           <div class="links">
             <a href="#services">Services</a>
             <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
+            <a href="#projects">Products</a>
             <a href="#skills">Skills</a>
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
@@ -101,13 +101,13 @@ import { ResumeService } from '../services/resume.service';
       </section>
 
       <section id="projects">
-        <h2>Projects</h2>
+        <h2>Products &amp; projects</h2>
         <div class="grid" [@staggerList]>
           <article class="card hoverable" *ngFor="let p of resume()?.projects" [@fadeIn]>
             <div class="card-head">
               <h3>{{ p.name }} <span class="status" *ngIf="p.status">{{ p.status }}</span></h3>
               <div class="links">
-                <a *ngIf="p.url" [href]="p.url" target="_blank" rel="noopener">Live</a>
+                <a *ngIf="p.url" [href]="p.url" target="_blank" rel="noopener">Open ↗</a>
                 <a *ngIf="p.repo" [href]="p.repo" target="_blank" rel="noopener">Code</a>
               </div>
             </div>
