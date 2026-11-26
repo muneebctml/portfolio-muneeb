@@ -8,7 +8,11 @@ export interface Resume {
   website?: string;
   linkedin?: string;
   github?: string;
+  availability?: string;
+  resumes?: ResumeFile[];
   summary?: string;
+  services?: Service[];
+  skillGroups?: SkillGroup[];
   skills?: string[];
   tools?: string[];
   experience?: Experience[];
@@ -26,8 +30,24 @@ export interface Experience {
   technologies?: string[];
 }
 
+export interface ResumeFile {
+  label: string;
+  file: string;
+}
+
+export interface Service {
+  name: string;
+  description: string;
+}
+
+export interface SkillGroup {
+  name: string;
+  items: string[];
+}
+
 export interface Project {
   name: string;
+  status?: string;
   description?: string;
   url?: string;
   repo?: string;

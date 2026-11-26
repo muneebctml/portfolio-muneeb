@@ -1,186 +1,158 @@
 {
   "name": "Muneeb Ur Rehman",
-  "title": "Full Stack Developer | .NET | Angular | SQL",
-  "location": "",
+  "title": "Senior .NET Backend & Full-Stack Engineer",
+  "location": "Pakistan (UTC+5) · Remote, works across US, EU and Gulf hours",
+  "availability": "Available now for remote full-time, part-time and contract work",
   "photo": "assets/Profile-Muneeb.jpeg",
   "email": "muneebur047@gmail.com",
   "phone": "+92 300 601 7047",
-  "website": "http://muneebtech.net/",
+  "website": "https://muneebtech.net/",
   "linkedin": "https://www.linkedin.com/in/muneebur047/",
   "github": "https://github.com/muneebctml",
-  "summary": "Full Stack Developer with 6+ years of experience building scalable ERP systems, APIs, and enterprise web applications using .NET, Azure, and modern front-end frameworks (React, Angular). Specialized in Microsoft Dynamics GP customization, SQL performance optimization, and CI/CD automation. Proven leader in mentoring teams, driving digital transformation, and delivering secure, high-performance solutions for global clients.",
-  "skills": ["C#, .NET (Core, MVC, Web API), ASP.NET, Entity Framework Core", "JavaScript, TypeScript, Angular, React", "SQL Server, T-SQL, Database Design", "Azure DevOps, CI/CD Pipelines", "HTML5, CSS3, SCSS, Bootstrap", "RESTful APIs, Microservices Architecture", "Agile Methodologies, Scrum"],
-  "tools": ["Git", "Docker", "Postman", "Visual Studio", "Azure DevOps", "SQL Server Management Studio"],
+  "resumes": [
+    { "label": "Backend CV", "file": "assets/Muneeb-Ur-Rehman-Backend-Resume.pdf" },
+    { "label": "Full-Stack CV", "file": "assets/Muneeb-Ur-Rehman-FullStack-Resume.pdf" }
+  ],
+  "summary": "Senior .NET engineer with 6+ years building data-heavy ERP, finance, payroll and U.S. healthcare systems. I design and ship ASP.NET Core APIs, PostgreSQL and SQL Server data models, background jobs and Angular or React front ends where correctness and auditability matter, and I own the work from domain modeling through deployment and production support. I currently lead a team of five developers.",
+  "services": [
+    {
+      "name": "Backend APIs & services",
+      "description": "ASP.NET Core APIs, background processing with Hangfire, authentication and role-based access, integrations with ERP and third-party systems."
+    },
+    {
+      "name": "Database performance & data pipelines",
+      "description": "PostgreSQL and SQL Server query tuning, N+1 fixes, bulk loads with binary COPY, staging and upserts, cross-database sync and migrations."
+    },
+    {
+      "name": "Full-stack business apps",
+      "description": "End-to-end .NET + Angular (or React) features: data model, API, UI, Docker deployment and CI/CD."
+    },
+    {
+      "name": "Legacy modernization",
+      "description": "Moving FoxPro, VB and older .NET systems to modular, multi-tenant web platforms with audit trails and safe migration plans."
+    }
+  ],
+  "skillGroups": [
+    { "name": "Backend", "items": ["C#", "ASP.NET Core (.NET 8/9/10)", "REST APIs", "EF Core", "JWT / RBAC", "Hangfire", "Redis"] },
+    { "name": "Data", "items": ["PostgreSQL", "SQL Server / T-SQL", "ClickHouse", "Azure SQL", "Query tuning", "Bulk data pipelines"] },
+    { "name": "Frontend", "items": ["Angular", "TypeScript", "React", "JavaScript", "Razor Pages"] },
+    { "name": "Architecture", "items": ["Modular monolith", "Clean Architecture", "DDD", "CQRS", "Multi-tenancy", "Audit trails"] },
+    { "name": "Delivery", "items": ["Docker", "GitLab CI/CD", "Azure DevOps", "Azure Functions", "Linux", "IIS", "Nginx", "Serilog / Seq"] },
+    { "name": "Domains", "items": ["ERP & accounting", "Financial reporting", "Payroll & HRMS", "U.S. healthcare claims", "Industrial analytics"] }
+  ],
   "experience": [
-  {
-    "company": "Tuli",
-    "role": "Senior Software Engineer",
-    "start": "Jul 2024",
-    "end": "Present",
-    "location": "Remote",
-    "highlights": [
-      "End-to-end ERP system development with .NET 9 and React.",
-      "Built CI/CD pipelines with GitLab and Docker, streamlining deployments.",
-      "Optimized PostgreSQL & ClickHouse for improved reporting and reduced costs."
-    ],
-    "technologies": ["React", ".NET 9", "PostgreSQL", "ClickHouse", "Docker", "GitLab CI/CD", "Hangfire"]
-  },
-  {
-    "company": "Integriti Pvt Ltd",
-    "role": "Software Engineer",
-    "start": "Oct 2023",
-    "end": "Jul 2024",
-    "location": "Lahore, Pakistan",
-    "highlights": [
-      "Developed HIPAA-compliant healthcare platform using .NET 7 & Azure SQL.",
-      "Automated invoicing, PDF generation, and email notifications.",
-      "Enhanced Razor Pages UI with jQuery for better client experience."
-    ],
-    "technologies": [".NET 7", "Azure SQL", "Razor Pages", "jQuery", "JavaScript"]
-  },
-  {
-    "company": "Technomics",
-    "role": "Software Engineer",
-    "start": "Dec 2022",
-    "end": "Mar 2024",
-    "location": "Lahore, Pakistan",
-    "highlights": [
-      "Architected enterprise applications with ASP.NET MVC & .NET 7.",
-      "Implemented Identity Server for secure authentication & authorization.",
-      "Designed Azure-based services for real-time data processing."
-    ],
-    "technologies": [".NET 7", "ASP.NET MVC", "Identity Server", "Azure", "REST APIs", "Angular", "CI/CD"]
-  },
-  {
-    "company": "Colony Textile Mills",
-    "role": "Technical Lead",
-    "start": "Jul 2019",
-    "end": "Dec 2022",
-    "location": "Multan, Pakistan",
-    "highlights": [
-      "Customized Microsoft Dynamics GP ERP, boosting finance operations.",
-      "Integrated biometric and face scanning systems for 5,000+ employees.",
-      "Directed in-house HRM & POS app development, cutting vendor costs."
-    ],
-    "technologies": ["Microsoft Dynamics GP", "Dexterity", "SSRS", "Crystal Reports", ".NET", "Angular", "SQL Server"]
-  },
-  {
-    "company": "Desire Studio",
-    "role": "Unity Game Developer",
-    "start": "Jan 2018",
-    "end": "Jun 2019",
-    "location": "Lahore, Pakistan",
-    "highlights": [
-      "Developed and published Android games on Google Play Store.",
-      "Designed immersive environments and wrote efficient C# game scripts.",
-      "Built responsive UI/UX for mobile gameplay."
-    ],
-    "technologies": ["Unity3D", "C#", "Android", "Game Development"]
-  }
-],
-"projects": [
-  {
-    "name": "ERP System for Textile Industry",
-    "description": "An enterprise ERP platform developed to streamline finance, HR, and operations for a textile company.",
-    "url": "",
-    "repo": "",
-    "highlights": [
-      "Customized Microsoft Dynamics GP ERP with in-house modules.",
-      "Integrated biometric devices for attendance tracking of 5,000+ employees.",
-      "Improved financial reporting speed by 30% with optimized SQL queries."
-    ],
-    "technologies": [".NET", "Microsoft Dynamics GP", "SQL Server", "SSRS", "Angular"]
-  },
-  {
-    "name": "Healthcare Compliance Platform",
-    "description": "A HIPAA-compliant web application enabling secure patient data management, billing, and reporting.",
-    "url": "",
-    "repo": "",
-    "highlights": [
-      "Developed core backend using .NET 7 and Azure SQL.",
-      "Automated invoicing, PDF reports, and email notifications.",
-      "Enhanced usability with interactive Razor Pages and jQuery."
-    ],
-    "technologies": [".NET 7", "Azure SQL", "Razor Pages", "jQuery"]
-  },
-  {
-    "name": "Cloud-Based ERP Reporting System",
-    "description": "A reporting solution for ERP systems designed to handle large-scale financial and operational datasets.",
-    "url": "",
-    "repo": "",
-    "highlights": [
-      "Optimized PostgreSQL & ClickHouse queries, reducing data processing costs by 25%.",
-      "Implemented CI/CD pipelines with GitLab and Docker.",
-      "Delivered real-time dashboards for executives and stakeholders."
-    ],
-    "technologies": [".NET 9", "React", "PostgreSQL", "ClickHouse", "Docker", "GitLab CI/CD"]
-  },
-  {
-    "name": "Human Resource Management System (HRMS)",
-    "description": "A complete HRM system built from the ground up, covering the entire employee lifecycle from joining to resignation.",
-    "url": "http://69.197.152.150:9809/",
-    "repo": "",
-    "highlights": [
-      "Designed and developed modules for payroll, salary-on-roll, leave management, and clearance workflows.",
-      "Implemented user-based access rights for secure role management.",
-      "Integrated with biometric devices (fingerprint, barcode) for attendance tracking.",
-      "Connected with ERP for seamless financial and operational reporting.",
-      "Automated reporting with SSRS for HR and finance departments."
-    ],
-    "technologies": [".NET", "Razor Pages", "AngularJS", "MSSQL", "SSRS", "jQuery", "Biometric SDKs", "ERP Integration"]
-  },
-  {
-    "name": "Loom Management System",
-    "description": "A web-based control and monitoring panel for weaving machines, providing detailed production tracking, reporting, and efficiency analytics.",
-    "url": "http://69.197.152.150:9810/",
-    "repo": "",
-    "highlights": [
-      "Developed panel to monitor loom status and machine performance in real time.",
-      "Enabled supervisors to control weaving functions and track downtime.",
-      "Built reporting dashboards to measure production efficiency and output trends.",
-      "Integrated with ERP for unified textile production management."
-    ],
-    "technologies": [".NET", "Razor Pages", "AngularJS", "MSSQL", "SSRS", "jQuery", "ERP Integration"]
-  },
-  {
-    "name": "Android Games (Unity3D)",
-    "description": "Multiple mobile games developed and published on Google Play Store.",
-    "url": "",
-    "repo": "",
-    "highlights": [
-      "Designed immersive gameplay and responsive UI/UX.",
-      "Published Android titles gaining thousands of downloads.",
-      "Implemented efficient C# game scripts for smooth performance."
-    ],
-    "technologies": ["Unity3D", "C#", "Android", "Game Development"]
-  },
-  {
-    "name": "Portfolio Website",
-    "description": "A personal portfolio website showcasing projects, skills, and experience.",
-    "url": "https://muneebtech.net/",
-    "repo": "https://github.com/muneebctml/portfolio-muneeb",
-    "highlights": [
-      "Developed a responsive and modern portfolio website using Angular.",
-      "Showcased projects, skills, and professional experience effectively.",
-      "Implemented SEO best practices to enhance online visibility."
-    ],
-    "technologies": ["Angular", "TypeScript", "HTML5", "CSS3", "Bootstrap"]
-  }
-],
+    {
+      "company": "Tuli",
+      "role": "Senior Software Engineer",
+      "start": "Jul 2024",
+      "end": "Present",
+      "location": "Remote",
+      "highlights": [
+        "Implemented the declarative .report capability in a model-driven ERP, so financial and operational reports are defined in metadata rather than hand-coded.",
+        "Optimized .model parsing and data-retrieval paths, removing N+1 entity-loading patterns from core business queries.",
+        "Built accounting journal services, reporting queries and dashboards, plus financial and operational integrity checks.",
+        "Shipped targeted React UI changes and took part in architecture discussions, code reviews and production troubleshooting."
+      ],
+      "technologies": [".NET 9", "PostgreSQL", "ClickHouse", "Redis", "Hangfire", "React", "Docker", "GitLab CI/CD"]
+    },
+    {
+      "company": "Integriti Pvt Ltd",
+      "role": "Software Engineer",
+      "start": "Oct 2023",
+      "end": "Jul 2024",
+      "location": "Lahore, Pakistan",
+      "highlights": [
+        "Modernized U.S. healthcare claims, billing, patient-management and accounts workflows.",
+        "Tuned SQL queries and automated invoicing, PDF generation and email notifications.",
+        "Worked directly with U.S. stakeholders on HIPAA-sensitive features with role-based access and secure data handling."
+      ],
+      "technologies": [".NET 7", "Razor Pages", "SQL Server", "Azure SQL", "jQuery"]
+    },
+    {
+      "company": "Technomics",
+      "role": "Software Engineer",
+      "start": "Dec 2022",
+      "end": "Oct 2023",
+      "location": "Lahore, Pakistan",
+      "highlights": [
+        "Developed healthcare payment and reimbursement workflows on ASP.NET and Azure SQL.",
+        "Implemented Azure Functions-based background processing, Power BI / RDLC reporting and role-based authorization."
+      ],
+      "technologies": ["ASP.NET", "Azure SQL", "Azure Functions", "Power BI", "RDLC"]
+    },
+    {
+      "company": "Colony Textile Mills Limited",
+      "role": "Technical Lead",
+      "start": "Jul 2019",
+      "end": "Dec 2022",
+      "location": "Multan, Pakistan",
+      "highlights": [
+        "Led a team of developers delivering in-house HRMS, payroll, attendance and reporting systems.",
+        "Integrated Microsoft Dynamics GP finance processes with in-house systems through secure APIs and SQL Server reporting.",
+        "Connected biometric attendance devices and kept legacy Visual FoxPro / VB systems integrated with newer .NET services."
+      ],
+      "technologies": [".NET", "SQL Server", "Microsoft Dynamics GP", "SSRS", "Angular"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Colony HR: payroll modernization",
+      "status": "In UAT",
+      "description": "Multi-company HR and payroll platform replacing a Visual FoxPro, VB6 and SQL Server estate that covers 10K+ employees across six or more company databases.",
+      "highlights": [
+        "Leading the build: modular boundaries, schema-per-tenant PostgreSQL, granular permissions and approval workflows.",
+        "Attendance, leave, overtime, loans and payroll logic with audit history and payroll integrity controls.",
+        "Running in internal UAT; historical migration and production cutover are next."
+      ],
+      "technologies": [".NET 10", "Angular", "PostgreSQL", "EF Core", "Hangfire", "MinIO", "Docker"]
+    },
+    {
+      "name": "Colossys: industrial data sync",
+      "status": "Production work",
+      "description": "Industrial monitoring and manufacturing analytics platform.",
+      "highlights": [
+        "Optimized machine-data synchronization to process 100K+ records within minutes.",
+        "Configurable batching, PostgreSQL binary COPY, staging tables, transactional upserts and SQL Server bulk operations.",
+        "Cut unnecessary logging and database overhead; built reporting and analytics features."
+      ],
+      "technologies": [".NET", "PostgreSQL", "SQL Server", "Angular", "Hangfire", "Docker"]
+    },
+    {
+      "name": "Tuli: declarative ERP reporting",
+      "status": "Production work",
+      "description": "Model-driven ERP and property-management platform built by a team around .model, .report and .workflow files.",
+      "highlights": [
+        "Owned the .report capability for financial and operational reporting.",
+        "Accounting journals, dashboards, query optimization and data-integrity checks."
+      ],
+      "technologies": [".NET 9", "PostgreSQL / JSONB", "ClickHouse", "ANTLR", "Roslyn", "React"]
+    },
+    {
+      "name": "DbSync",
+      "status": "Tooling",
+      "description": ".NET CLI for SQL Server and PostgreSQL schema discovery, diff-based migrations and configurable full or append synchronization.",
+      "technologies": [".NET 10", "SQL Server", "PostgreSQL", "CLI"]
+    },
+    {
+      "name": "Mini Agro POS",
+      "status": "Product",
+      "description": "Retail POS, administration and storefront with an isolated Docker deployment per customer.",
+      "technologies": [".NET 10", "Angular", "PostgreSQL", "MinIO", "Docker"]
+    },
+    {
+      "name": "Nivora",
+      "status": "In development",
+      "description": "Personal finance product with a .NET API, Angular web app and Flutter Android client, including offline and online data handling.",
+      "technologies": [".NET", "Angular", "Flutter", "PostgreSQL"]
+    }
+  ],
   "education": [
-  {
-    "institution": "Bahauddin Zakariya University - BZU",
-    "degree": "BS Computer Science",
-    "start": "2014",
-    "end": "2019",
-    "location": "Multan, Pakistan",
-    "highlights": [
-      "Completed coursework in software engineering, database systems, and distributed computing.",
-      "Graduated with strong focus on .NET development, web technologies, and cloud computing.",
-      "Led multiple academic projects including an ERP module and mobile applications.",
-      "Actively participated in coding competitions and university hackathons.",
-      "Developed a final year project integrating .NET, SQL Server, and cloud services."
-    ]
-  }
-]
+    {
+      "institution": "Bahauddin Zakariya University",
+      "degree": "BS Computer Science",
+      "start": "2014",
+      "end": "2019",
+      "location": "Multan, Pakistan"
+    }
+  ]
 }

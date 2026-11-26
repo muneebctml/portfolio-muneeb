@@ -25,6 +25,7 @@ import { ResumeService } from '../services/resume.service';
         <nav class="nav">
           <a class="brand" href="#top">{{ resume()?.name || 'Your Name' }}</a>
           <div class="links">
+            <a href="#services">Services</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
@@ -40,6 +41,7 @@ import { ResumeService } from '../services/resume.service';
           <h1>{{ resume()?.name }}</h1>
           <p class="title">{{ resume()?.title }}</p>
           <p class="loc" *ngIf="resume()?.location">{{ resume()?.location }}</p>
+          <p class="availability" *ngIf="resume()?.availability"><span class="dot" aria-hidden="true"></span>{{ resume()?.availability }}</p>
           <p class="summary" *ngIf="resume()?.summary">{{ resume()?.summary }}</p>
           <div class="actions">
             <a *ngIf="resume()?.github" [href]="resume()?.github" target="_blank" rel="noopener noreferrer" class="btn btn-outline" title="Open GitHub profile" aria-label="Open GitHub profile">
@@ -50,13 +52,13 @@ import { ResumeService } from '../services/resume.service';
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zm7 0h3.82v2.11h.05c.53-1 1.83-2.11 3.76-2.11 4.02 0 4.76 2.64 4.76 6.08V24h-4v-7.3c0-1.74-.03-3.98-2.43-3.98-2.43 0-2.8 1.9-2.8 3.86V24h-4V8.5z"/></svg>
               LinkedIn
             </a>
-            <a *ngIf="resume()?.website" [href]="resume()?.website" target="_blank" rel="noopener noreferrer" class="btn btn-outline" title="Open personal website" aria-label="Open personal website">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.93 6h-3.22a15.8 15.8 0 0 0-1.2-3.38A8.03 8.03 0 0 1 18.93 8ZM12 4c.8 0 2.01 1.59 2.69 4H9.31C9.99 5.59 11.2 4 12 4ZM7.49 4.62A15.8 15.8 0 0 0 6.29 8H3.07A8.03 8.03 0 0 1 7.49 4.62ZM4.07 10h2.01c-.05.66-.08 1.32-.08 2s.03 1.34.08 2H4.07A7.96 7.96 0 0 1 4 12c0-.68.03-1.34.07-2Zm.86 6h3.22c.32 1.2.74 2.4 1.2 3.38A8.03 8.03 0 0 1 4.93 16Zm7.07 3.99c-.8 0-2.01-1.59-2.69-3.99h5.38c-.68 2.4-1.89 3.99-2.69 3.99ZM17.71 16h3.22a8.03 8.03 0 0 1-4.44 3.38c.46-.98.88-2.18 1.2-3.38ZM19.93 14h-2.01c.05-.66.08-1.32.08-2s-.03-1.34-.08-2h2.01c.04.66.07 1.32.07 2s-.03 1.34-.07 2Zm-3.64-6c.05.66.08 1.32.08 2s-.03 1.34-.08 2H7.71c-.05-.66-.08-1.32-.08-2s.03-1.34.08-2h8.58Z"/></svg>
-              Website
+            <a *ngIf="resume()?.email" [href]="'mailto:' + resume()?.email + '?subject=Project%20or%20role%20enquiry'" class="btn btn-outline" title="Email Muneeb" aria-label="Email Muneeb">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm1 2.4V17h16V7.4l-7.4 5.2a1 1 0 0 1-1.2 0L4 7.4ZM5.6 7l6.4 4.5L18.4 7H5.6Z"/></svg>
+              Hire me
             </a>
-            <a href="assets/Muneeb-Ur-Rehman-Resume.pdf" download class="btn btn-filled" title="Download resume PDF" aria-label="Download resume PDF">
+            <a *ngFor="let r of resume()?.resumes" [href]="r.file" download class="btn btn-filled" [title]="'Download ' + r.label + ' (PDF)'" [attr.aria-label]="'Download ' + r.label + ' (PDF)'">
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.3a1 1 0 0 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4A1 1 0 0 1 8.7 10.3L11 12.59V4a1 1 0 0 1 1-1Zm-7 14a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"/></svg>
-              Download Resume
+              {{ r.label }}
             </a>
           </div>
         </div>
@@ -64,6 +66,16 @@ import { ResumeService } from '../services/resume.service';
     </header>
 
     <main class="container main">
+      <section id="services" *ngIf="resume()?.services?.length">
+        <h2>What I can help with</h2>
+        <div class="grid" [@staggerList]>
+          <article class="card hoverable service" *ngFor="let sv of resume()?.services" [@fadeIn]>
+            <h3>{{ sv.name }}</h3>
+            <p class="description">{{ sv.description }}</p>
+          </article>
+        </div>
+      </section>
+
       <section id="experience">
         <h2>Experience</h2>
         <div class="timeline" [@staggerList]>
@@ -93,7 +105,7 @@ import { ResumeService } from '../services/resume.service';
         <div class="grid" [@staggerList]>
           <article class="card hoverable" *ngFor="let p of resume()?.projects" [@fadeIn]>
             <div class="card-head">
-              <h3>{{ p.name }}</h3>
+              <h3>{{ p.name }} <span class="status" *ngIf="p.status">{{ p.status }}</span></h3>
               <div class="links">
                 <a *ngIf="p.url" [href]="p.url" target="_blank" rel="noopener">Live</a>
                 <a *ngIf="p.repo" [href]="p.repo" target="_blank" rel="noopener">Code</a>
@@ -112,7 +124,15 @@ import { ResumeService } from '../services/resume.service';
 
       <section id="skills">
         <h2>Skills</h2>
-        <div class="tags" [@staggerList]>
+        <div class="skill-groups" *ngIf="resume()?.skillGroups?.length">
+          <div class="skill-group" *ngFor="let g of resume()?.skillGroups">
+            <h3>{{ g.name }}</h3>
+            <div class="tags">
+              <span class="tag" *ngFor="let t of g.items">{{ t }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="tags" *ngIf="resume()?.skills?.length" [@staggerList]>
           <span class="tag" *ngFor="let s of resume()?.skills">{{ s }}</span>
         </div>
         <h3 *ngIf="resume()?.tools?.length">Tools</h3>
@@ -227,6 +247,12 @@ import { ResumeService } from '../services/resume.service';
     .intro h1 { margin: .75rem 0 .25rem; font-size: clamp(1.8rem, 3.2vw, 3rem); }
     .title { margin: 0; color: var(--muted-fg); font-weight: 600; }
     .loc { margin: .25rem 0 0; color: var(--muted-fg); }
+    .availability { display:inline-flex; align-items:center; gap:.5rem; margin: .75rem 0 0; padding: .3rem .8rem; border-radius: 999px; border: 1px solid color-mix(in oklab, #2ecc71 45%, var(--border)); color: var(--fg); font-weight: 600; font-size: .95rem; }
+    .availability .dot { width: .55rem; height: .55rem; border-radius: 50%; background: #2ecc71; box-shadow: 0 0 0 3px rgba(46,204,113,.2); }
+    .status { margin-left: .4rem; padding: .1rem .5rem; border-radius: 999px; font-size: .72rem; font-weight: 600; vertical-align: middle; color: var(--muted-fg); border: 1px solid var(--border); }
+    .service h3 { margin-bottom: .35rem; }
+    .skill-groups { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem 1.5rem; }
+    .skill-group h3 { font-size: .95rem; color: var(--muted-fg); margin-bottom: .25rem; }
     .summary { max-width: 840px; margin: .9rem auto 1.25rem; color: var(--muted-fg); }
     .actions { display:flex; gap:.75rem; justify-content:center; flex-wrap: wrap; }
     .btn { position: relative; display:inline-flex; align-items:center; gap:.45rem; padding:.6rem 1.1rem; border-radius: .6rem; text-decoration:none; font-weight:600; transition: transform .1s ease, box-shadow .2s ease, filter .2s ease, background .2s ease, color .2s ease; }
@@ -269,6 +295,7 @@ import { ResumeService } from '../services/resume.service';
     .description { color: var(--muted-fg); margin: .25rem 0 .5rem; }
     .contact { list-style: none; padding: 0; margin: .5rem 0 0; }
     .contact li { margin: .25rem 0; }
+    .contact a { overflow-wrap: anywhere; }
     .footer { position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 1rem 0; text-align: center; color: var(--muted-fg); }
     .grid { display:grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
     .grid .card { grid-column: span 6; }
@@ -312,7 +339,7 @@ export class HomeComponent {
     this.resumeSvc.getResume().subscribe(r => {
       this.resume.set(r);
       if (r?.name) this.title.setTitle(`${r.name} - ${r.title || 'Portfolio'}`);
-      const desc = r?.summary || 'Portfolio';
+      const desc = r?.summary ? r.summary.slice(0, 300) : 'Portfolio';
       this.meta.updateTag({ name: 'description', content: desc });
     });
   }
